@@ -4,4 +4,5 @@ data/
 **/*.ipynb*
 .vscode/
 **/kaggle.json
+**/__pycache__/
 
