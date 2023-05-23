@@ -1,0 +1,3 @@
+[submodule "rt-api"]
+	path = rt-api
+	url = git@github.com:andrei-stoica/rt-api.git

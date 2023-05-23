@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import datetime
-from airflow.utils import trigger_rule
 
 import pendulum
 import logging
@@ -24,7 +23,7 @@ def clean_data(**kargs):
 
     task_instance = kargs.get("ti")
 
-    # in case of a run spaning 2 days use xcom
+    # in case of a run spanning 2 days use xcom
     date = datetime.now().date()
     task_instance.xcom_push(key="date", value=date)
 
@@ -159,6 +158,10 @@ def model_training(**kargs):
     data = data.set_index("Date")
     logging.info(f"Loaded data from [{path_to_raw}, {path_to_features}]")
 
+    # This follows the same data preperation as the example code.
+    # However, if goal of this model is to predict the next days volume I
+    # propose that the features should be from day *x* and the target should be
+    # from day *x+1*.
     features = ["vol_moving_avg", "adj_close_rolling_med"]
     target = "Volume"
 
@@ -195,7 +198,6 @@ def model_training(**kargs):
 
 
 ## START DAG CREATION:
-
 ##
 # This is set to run daily. I was thinking that a *real* pipeline such as this
 # one would run only retrieve the latest day's data and update an existing 
