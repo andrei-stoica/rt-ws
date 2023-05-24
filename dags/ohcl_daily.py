@@ -111,16 +111,16 @@ def feature_engineering(**kargs):
     logging.info(f"Written feature data to {out_path}")
 
 def watcher():
-    raise AirflowException("Failing run because of an upstream faliure")
+    raise AirflowException("Failing run because of an upstream failure")
 
 ##
-# the RandomForestRegressor from the example code could not run on my
+# The RandomForestRegressor from the example code could not run on my
 # machine with this dataset due to memory limitations. So the decision
 # to switch was practical one.
 #
 # After some internet research, I discovered an article that compared
-# multiple models at this exact task. CatBoost had the best perfomace.
-# That being said, the perfomace it exhibited in that write-up was
+# multiple models at this exact task. CatBoost had the best performance.
+# That being said, the performance it exhibited in that write-up was
 # highly influenced by recent futures trading volumes. This dataset
 # does not include volume for futures and options.
 # It would be interesting to try some of the training methodologies from
@@ -158,7 +158,7 @@ def model_training(**kargs):
     data = data.set_index("Date")
     logging.info(f"Loaded data from [{path_to_raw}, {path_to_features}]")
 
-    # This follows the same data preperation as the example code.
+    # This follows the same data preparation as the example code.
     # However, if goal of this model is to predict the next days volume I
     # propose that the features should be from day *x* and the target should be
     # from day *x+1*.
