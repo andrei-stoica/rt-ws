@@ -1,0 +1,1017 @@
+[2023-05-26T02:32:52.592+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ohcl_daily.model_training scheduled__2023-05-25T00:00:00+00:00 [queued]>
+[2023-05-26T02:32:52.599+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ohcl_daily.model_training scheduled__2023-05-25T00:00:00+00:00 [queued]>
+[2023-05-26T02:32:52.599+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-05-26T02:32:52.617+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): model_training> on 2023-05-25 00:00:00+00:00
+[2023-05-26T02:32:52.620+0000] {standard_task_runner.py:57} INFO - Started process 260 to run task
+[2023-05-26T02:32:52.621+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ohcl_daily', 'model_training', 'scheduled__2023-05-25T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/ohcl_daily.py', '--cfg-path', '/tmp/tmp2j5ok3f3']
+[2023-05-26T02:32:52.622+0000] {standard_task_runner.py:85} INFO - Job 7: Subtask model_training
+[2023-05-26T02:32:52.652+0000] {task_command.py:410} INFO - Running <TaskInstance: ohcl_daily.model_training scheduled__2023-05-25T00:00:00+00:00 [running]> on host 201885925c57
+[2023-05-26T02:32:52.737+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ohcl_daily' AIRFLOW_CTX_TASK_ID='model_training' AIRFLOW_CTX_EXECUTION_DATE='2023-05-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-25T00:00:00+00:00'
+[2023-05-26T02:33:19.234+0000] {ohcl_daily.py:160} INFO - Loaded data from [/data/ohcl_raw_2023-05-26, /data/ohcl_features_2023-05-26]
+[2023-05-26T02:33:22.624+0000] {logging_mixin.py:149} INFO - Learning rate set to 0.199202
+[2023-05-26T02:33:24.283+0000] {logging_mixin.py:149} INFO - 0:	learn: 11321971.7034980	total: 799ms	remaining: 13m 18s
+[2023-05-26T02:33:24.966+0000] {logging_mixin.py:149} INFO - 1:	learn: 10294714.9648618	total: 1.48s	remaining: 12m 19s
+[2023-05-26T02:33:25.656+0000] {logging_mixin.py:149} INFO - 2:	learn: 9575109.5321203	total: 2.17s	remaining: 12m 1s
+[2023-05-26T02:33:26.298+0000] {logging_mixin.py:149} INFO - 3:	learn: 9079304.4156476	total: 2.81s	remaining: 11m 40s
+[2023-05-26T02:33:26.948+0000] {logging_mixin.py:149} INFO - 4:	learn: 8742938.7392580	total: 3.46s	remaining: 11m 29s
+[2023-05-26T02:33:27.595+0000] {logging_mixin.py:149} INFO - 5:	learn: 8517921.8599324	total: 4.11s	remaining: 11m 20s
+[2023-05-26T02:33:28.214+0000] {logging_mixin.py:149} INFO - 6:	learn: 8368028.8213365	total: 4.73s	remaining: 11m 10s
+[2023-05-26T02:33:28.875+0000] {logging_mixin.py:149} INFO - 7:	learn: 8268785.4850083	total: 5.39s	remaining: 11m 8s
+[2023-05-26T02:33:29.465+0000] {logging_mixin.py:149} INFO - 8:	learn: 8202864.2630963	total: 5.98s	remaining: 10m 58s
+[2023-05-26T02:33:30.065+0000] {logging_mixin.py:149} INFO - 9:	learn: 8159362.0361361	total: 6.58s	remaining: 10m 51s
+[2023-05-26T02:33:30.689+0000] {logging_mixin.py:149} INFO - 10:	learn: 8130952.2527396	total: 7.2s	remaining: 10m 47s
+[2023-05-26T02:33:31.350+0000] {logging_mixin.py:149} INFO - 11:	learn: 8111507.0094595	total: 7.86s	remaining: 10m 47s
+[2023-05-26T02:33:31.975+0000] {logging_mixin.py:149} INFO - 12:	learn: 8098100.1641644	total: 8.49s	remaining: 10m 44s
+[2023-05-26T02:33:32.635+0000] {logging_mixin.py:149} INFO - 13:	learn: 8089406.8470612	total: 9.15s	remaining: 10m 44s
+[2023-05-26T02:33:33.289+0000] {logging_mixin.py:149} INFO - 14:	learn: 8083664.0169441	total: 9.8s	remaining: 10m 43s
+[2023-05-26T02:33:33.935+0000] {logging_mixin.py:149} INFO - 15:	learn: 8078738.2098527	total: 10.4s	remaining: 10m 42s
+[2023-05-26T02:33:34.601+0000] {logging_mixin.py:149} INFO - 16:	learn: 8075403.0241891	total: 11.1s	remaining: 10m 42s
+[2023-05-26T02:33:35.232+0000] {logging_mixin.py:149} INFO - 17:	learn: 8072869.9716364	total: 11.7s	remaining: 10m 40s
+[2023-05-26T02:33:35.919+0000] {logging_mixin.py:149} INFO - 18:	learn: 8071416.6831979	total: 12.4s	remaining: 10m 41s
+[2023-05-26T02:33:36.550+0000] {logging_mixin.py:149} INFO - 19:	learn: 8070246.9968729	total: 13.1s	remaining: 10m 39s
+[2023-05-26T02:33:37.235+0000] {logging_mixin.py:149} INFO - 20:	learn: 8069377.3087792	total: 13.7s	remaining: 10m 40s
+[2023-05-26T02:33:37.928+0000] {logging_mixin.py:149} INFO - 21:	learn: 8067781.2016787	total: 14.4s	remaining: 10m 41s
+[2023-05-26T02:33:38.604+0000] {logging_mixin.py:149} INFO - 22:	learn: 8067168.3131507	total: 15.1s	remaining: 10m 42s
+[2023-05-26T02:33:39.266+0000] {logging_mixin.py:149} INFO - 23:	learn: 8066235.3244038	total: 15.8s	remaining: 10m 41s
+[2023-05-26T02:33:40.003+0000] {logging_mixin.py:149} INFO - 24:	learn: 8065541.9417390	total: 16.5s	remaining: 10m 44s
+[2023-05-26T02:33:40.694+0000] {logging_mixin.py:149} INFO - 25:	learn: 8065386.3120708	total: 17.2s	remaining: 10m 44s
+[2023-05-26T02:33:41.385+0000] {logging_mixin.py:149} INFO - 26:	learn: 8065025.0618441	total: 17.9s	remaining: 10m 44s
+[2023-05-26T02:33:42.122+0000] {logging_mixin.py:149} INFO - 27:	learn: 8064953.3374234	total: 18.6s	remaining: 10m 46s
+[2023-05-26T02:33:42.855+0000] {logging_mixin.py:149} INFO - 28:	learn: 8064698.2574192	total: 19.4s	remaining: 10m 48s
+[2023-05-26T02:33:43.568+0000] {logging_mixin.py:149} INFO - 29:	learn: 8064251.1922749	total: 20.1s	remaining: 10m 49s
+[2023-05-26T02:33:44.339+0000] {logging_mixin.py:149} INFO - 30:	learn: 8064215.5437137	total: 20.8s	remaining: 10m 51s
+[2023-05-26T02:33:45.085+0000] {logging_mixin.py:149} INFO - 31:	learn: 8063858.5183059	total: 21.6s	remaining: 10m 53s
+[2023-05-26T02:33:45.749+0000] {logging_mixin.py:149} INFO - 32:	learn: 8062203.7897976	total: 22.3s	remaining: 10m 52s
+[2023-05-26T02:33:46.501+0000] {logging_mixin.py:149} INFO - 33:	learn: 8062170.0463156	total: 23s	remaining: 10m 53s
+[2023-05-26T02:33:47.110+0000] {logging_mixin.py:149} INFO - 34:	learn: 8062005.8737519	total: 23.6s	remaining: 10m 51s
+[2023-05-26T02:33:47.791+0000] {logging_mixin.py:149} INFO - 35:	learn: 8061797.9372220	total: 24.3s	remaining: 10m 50s
+[2023-05-26T02:33:48.571+0000] {logging_mixin.py:149} INFO - 36:	learn: 8061536.2396285	total: 25.1s	remaining: 10m 52s
+[2023-05-26T02:33:49.292+0000] {logging_mixin.py:149} INFO - 37:	learn: 8061506.8748234	total: 25.8s	remaining: 10m 53s
+[2023-05-26T02:33:50.022+0000] {logging_mixin.py:149} INFO - 38:	learn: 8061375.5248149	total: 26.5s	remaining: 10m 53s
+[2023-05-26T02:33:50.778+0000] {logging_mixin.py:149} INFO - 39:	learn: 8061133.5347873	total: 27.3s	remaining: 10m 54s
+[2023-05-26T02:33:51.433+0000] {logging_mixin.py:149} INFO - 40:	learn: 8060977.4704247	total: 27.9s	remaining: 10m 53s
+[2023-05-26T02:33:52.079+0000] {logging_mixin.py:149} INFO - 41:	learn: 8060859.7549853	total: 28.6s	remaining: 10m 52s
+[2023-05-26T02:33:52.836+0000] {logging_mixin.py:149} INFO - 42:	learn: 8060374.6279835	total: 29.3s	remaining: 10m 53s
+[2023-05-26T02:33:53.595+0000] {logging_mixin.py:149} INFO - 43:	learn: 8060023.7675973	total: 30.1s	remaining: 10m 53s
+[2023-05-26T02:33:54.384+0000] {logging_mixin.py:149} INFO - 44:	learn: 8060012.9821379	total: 30.9s	remaining: 10m 55s
+[2023-05-26T02:33:55.103+0000] {logging_mixin.py:149} INFO - 45:	learn: 8059846.0481961	total: 31.6s	remaining: 10m 55s
+[2023-05-26T02:33:55.804+0000] {logging_mixin.py:149} INFO - 46:	learn: 8058916.2733259	total: 32.3s	remaining: 10m 55s
+[2023-05-26T02:33:56.479+0000] {logging_mixin.py:149} INFO - 47:	learn: 8058869.9400046	total: 33s	remaining: 10m 54s
+[2023-05-26T02:33:57.244+0000] {logging_mixin.py:149} INFO - 48:	learn: 8058846.5773604	total: 33.7s	remaining: 10m 54s
+[2023-05-26T02:33:57.886+0000] {logging_mixin.py:149} INFO - 49:	learn: 8058660.6645485	total: 34.4s	remaining: 10m 53s
+[2023-05-26T02:33:58.635+0000] {logging_mixin.py:149} INFO - 50:	learn: 8058655.0277713	total: 35.1s	remaining: 10m 53s
+[2023-05-26T02:33:59.366+0000] {logging_mixin.py:149} INFO - 51:	learn: 8058528.0587849	total: 35.9s	remaining: 10m 53s
+[2023-05-26T02:34:00.064+0000] {logging_mixin.py:149} INFO - 52:	learn: 8058453.4823594	total: 36.6s	remaining: 10m 53s
+[2023-05-26T02:34:00.700+0000] {logging_mixin.py:149} INFO - 53:	learn: 8058197.1429841	total: 37.2s	remaining: 10m 51s
+[2023-05-26T02:34:01.469+0000] {logging_mixin.py:149} INFO - 54:	learn: 8057632.1359553	total: 38s	remaining: 10m 52s
+[2023-05-26T02:34:02.131+0000] {logging_mixin.py:149} INFO - 55:	learn: 8057612.9434587	total: 38.6s	remaining: 10m 51s
+[2023-05-26T02:34:02.823+0000] {logging_mixin.py:149} INFO - 56:	learn: 8057481.7622450	total: 39.3s	remaining: 10m 50s
+[2023-05-26T02:34:03.574+0000] {logging_mixin.py:149} INFO - 57:	learn: 8057470.0619722	total: 40.1s	remaining: 10m 50s
+[2023-05-26T02:34:04.236+0000] {logging_mixin.py:149} INFO - 58:	learn: 8057244.3892830	total: 40.7s	remaining: 10m 49s
+[2023-05-26T02:34:04.927+0000] {logging_mixin.py:149} INFO - 59:	learn: 8057233.0647821	total: 41.4s	remaining: 10m 49s
+[2023-05-26T02:34:05.606+0000] {logging_mixin.py:149} INFO - 60:	learn: 8057109.4160150	total: 42.1s	remaining: 10m 48s
+[2023-05-26T02:34:06.426+0000] {logging_mixin.py:149} INFO - 61:	learn: 8057107.2021022	total: 42.9s	remaining: 10m 49s
+[2023-05-26T02:34:07.158+0000] {logging_mixin.py:149} INFO - 62:	learn: 8057039.5462461	total: 43.7s	remaining: 10m 49s
+[2023-05-26T02:34:07.938+0000] {logging_mixin.py:149} INFO - 63:	learn: 8056991.7283882	total: 44.4s	remaining: 10m 49s
+[2023-05-26T02:34:08.673+0000] {logging_mixin.py:149} INFO - 64:	learn: 8056836.1143429	total: 45.2s	remaining: 10m 49s
+[2023-05-26T02:34:09.357+0000] {logging_mixin.py:149} INFO - 65:	learn: 8056698.2004300	total: 45.9s	remaining: 10m 48s
+[2023-05-26T02:34:10.011+0000] {logging_mixin.py:149} INFO - 66:	learn: 8056294.7295058	total: 46.5s	remaining: 10m 47s
+[2023-05-26T02:34:10.769+0000] {logging_mixin.py:149} INFO - 67:	learn: 8056292.7729419	total: 47.3s	remaining: 10m 47s
+[2023-05-26T02:34:11.517+0000] {logging_mixin.py:149} INFO - 68:	learn: 8056290.7564343	total: 48s	remaining: 10m 47s
+[2023-05-26T02:34:12.323+0000] {logging_mixin.py:149} INFO - 69:	learn: 8056287.0987233	total: 48.8s	remaining: 10m 48s
+[2023-05-26T02:34:13.024+0000] {logging_mixin.py:149} INFO - 70:	learn: 8056253.8807092	total: 49.5s	remaining: 10m 47s
+[2023-05-26T02:34:13.812+0000] {logging_mixin.py:149} INFO - 71:	learn: 8056100.7652500	total: 50.3s	remaining: 10m 48s
+[2023-05-26T02:34:14.549+0000] {logging_mixin.py:149} INFO - 72:	learn: 8056039.0470917	total: 51s	remaining: 10m 48s
+[2023-05-26T02:34:15.251+0000] {logging_mixin.py:149} INFO - 73:	learn: 8055892.4255590	total: 51.7s	remaining: 10m 47s
+[2023-05-26T02:34:15.956+0000] {logging_mixin.py:149} INFO - 74:	learn: 8055867.9915534	total: 52.5s	remaining: 10m 46s
+[2023-05-26T02:34:16.718+0000] {logging_mixin.py:149} INFO - 75:	learn: 8055720.8598773	total: 53.2s	remaining: 10m 46s
+[2023-05-26T02:34:17.384+0000] {logging_mixin.py:149} INFO - 76:	learn: 8055666.1277827	total: 53.9s	remaining: 10m 45s
+[2023-05-26T02:34:18.142+0000] {logging_mixin.py:149} INFO - 77:	learn: 8055661.6877083	total: 54.6s	remaining: 10m 45s
+[2023-05-26T02:34:18.872+0000] {logging_mixin.py:149} INFO - 78:	learn: 8055598.6724933	total: 55.4s	remaining: 10m 45s
+[2023-05-26T02:34:19.599+0000] {logging_mixin.py:149} INFO - 79:	learn: 8055437.0138061	total: 56.1s	remaining: 10m 45s
+[2023-05-26T02:34:20.333+0000] {logging_mixin.py:149} INFO - 80:	learn: 8055299.5450574	total: 56.8s	remaining: 10m 44s
+[2023-05-26T02:34:21.016+0000] {logging_mixin.py:149} INFO - 81:	learn: 8055226.9306216	total: 57.5s	remaining: 10m 43s
+[2023-05-26T02:34:21.796+0000] {logging_mixin.py:149} INFO - 82:	learn: 8055223.4375984	total: 58.3s	remaining: 10m 44s
+[2023-05-26T02:34:22.427+0000] {logging_mixin.py:149} INFO - 83:	learn: 8055200.9887418	total: 58.9s	remaining: 10m 42s
+[2023-05-26T02:34:23.166+0000] {logging_mixin.py:149} INFO - 84:	learn: 8055196.8879403	total: 59.7s	remaining: 10m 42s
+[2023-05-26T02:34:23.934+0000] {logging_mixin.py:149} INFO - 85:	learn: 8055194.9560739	total: 1m	remaining: 10m 42s
+[2023-05-26T02:34:24.624+0000] {logging_mixin.py:149} INFO - 86:	learn: 8054937.6404198	total: 1m 1s	remaining: 10m 41s
+[2023-05-26T02:34:25.344+0000] {logging_mixin.py:149} INFO - 87:	learn: 8054932.8741158	total: 1m 1s	remaining: 10m 40s
+[2023-05-26T02:34:26.023+0000] {logging_mixin.py:149} INFO - 88:	learn: 8054925.1647385	total: 1m 2s	remaining: 10m 39s
+[2023-05-26T02:34:26.667+0000] {logging_mixin.py:149} INFO - 89:	learn: 8054850.1761439	total: 1m 3s	remaining: 10m 38s
+[2023-05-26T02:34:27.403+0000] {logging_mixin.py:149} INFO - 90:	learn: 8054846.8307084	total: 1m 3s	remaining: 10m 38s
+[2023-05-26T02:34:28.053+0000] {logging_mixin.py:149} INFO - 91:	learn: 8054832.3231044	total: 1m 4s	remaining: 10m 37s
+[2023-05-26T02:34:28.714+0000] {logging_mixin.py:149} INFO - 92:	learn: 8054827.3033136	total: 1m 5s	remaining: 10m 35s
+[2023-05-26T02:34:29.378+0000] {logging_mixin.py:149} INFO - 93:	learn: 8054656.9732871	total: 1m 5s	remaining: 10m 34s
+[2023-05-26T02:34:30.049+0000] {logging_mixin.py:149} INFO - 94:	learn: 8054621.5916296	total: 1m 6s	remaining: 10m 33s
+[2023-05-26T02:34:30.709+0000] {logging_mixin.py:149} INFO - 95:	learn: 8054325.5696455	total: 1m 7s	remaining: 10m 32s
+[2023-05-26T02:34:31.434+0000] {logging_mixin.py:149} INFO - 96:	learn: 8054322.2793975	total: 1m 7s	remaining: 10m 32s
+[2023-05-26T02:34:32.101+0000] {logging_mixin.py:149} INFO - 97:	learn: 8054208.5999628	total: 1m 8s	remaining: 10m 31s
+[2023-05-26T02:34:32.749+0000] {logging_mixin.py:149} INFO - 98:	learn: 8054143.6790976	total: 1m 9s	remaining: 10m 30s
+[2023-05-26T02:34:33.399+0000] {logging_mixin.py:149} INFO - 99:	learn: 8054017.6550786	total: 1m 9s	remaining: 10m 29s
+[2023-05-26T02:34:34.081+0000] {logging_mixin.py:149} INFO - 100:	learn: 8053995.4662766	total: 1m 10s	remaining: 10m 28s
+[2023-05-26T02:34:34.807+0000] {logging_mixin.py:149} INFO - 101:	learn: 8053936.9744362	total: 1m 11s	remaining: 10m 27s
+[2023-05-26T02:34:35.487+0000] {logging_mixin.py:149} INFO - 102:	learn: 8053768.0010387	total: 1m 11s	remaining: 10m 26s
+[2023-05-26T02:34:36.154+0000] {logging_mixin.py:149} INFO - 103:	learn: 8053683.2542724	total: 1m 12s	remaining: 10m 25s
+[2023-05-26T02:34:36.774+0000] {logging_mixin.py:149} INFO - 104:	learn: 8053639.0227752	total: 1m 13s	remaining: 10m 24s
+[2023-05-26T02:34:37.459+0000] {logging_mixin.py:149} INFO - 105:	learn: 8053563.3806927	total: 1m 13s	remaining: 10m 23s
+[2023-05-26T02:34:38.110+0000] {logging_mixin.py:149} INFO - 106:	learn: 8053372.8810885	total: 1m 14s	remaining: 10m 22s
+[2023-05-26T02:34:38.832+0000] {logging_mixin.py:149} INFO - 107:	learn: 8053366.2157985	total: 1m 15s	remaining: 10m 22s
+[2023-05-26T02:34:39.505+0000] {logging_mixin.py:149} INFO - 108:	learn: 8053271.6095859	total: 1m 15s	remaining: 10m 21s
+[2023-05-26T02:34:40.218+0000] {logging_mixin.py:149} INFO - 109:	learn: 8053269.3182257	total: 1m 16s	remaining: 10m 20s
+[2023-05-26T02:34:40.858+0000] {logging_mixin.py:149} INFO - 110:	learn: 8053221.6530569	total: 1m 17s	remaining: 10m 19s
+[2023-05-26T02:34:41.455+0000] {logging_mixin.py:149} INFO - 111:	learn: 8053192.0568199	total: 1m 17s	remaining: 10m 17s
+[2023-05-26T02:34:42.190+0000] {logging_mixin.py:149} INFO - 112:	learn: 8053189.3665072	total: 1m 18s	remaining: 10m 17s
+[2023-05-26T02:34:42.866+0000] {logging_mixin.py:149} INFO - 113:	learn: 8053105.0321285	total: 1m 19s	remaining: 10m 16s
+[2023-05-26T02:34:43.527+0000] {logging_mixin.py:149} INFO - 114:	learn: 8053028.6981435	total: 1m 20s	remaining: 10m 15s
+[2023-05-26T02:34:44.301+0000] {logging_mixin.py:149} INFO - 115:	learn: 8052968.3435363	total: 1m 20s	remaining: 10m 15s
+[2023-05-26T02:34:44.909+0000] {logging_mixin.py:149} INFO - 116:	learn: 8052958.1854567	total: 1m 21s	remaining: 10m 14s
+[2023-05-26T02:34:45.570+0000] {logging_mixin.py:149} INFO - 117:	learn: 8052854.1234589	total: 1m 22s	remaining: 10m 13s
+[2023-05-26T02:34:46.399+0000] {logging_mixin.py:149} INFO - 118:	learn: 8052851.4567626	total: 1m 22s	remaining: 10m 13s
+[2023-05-26T02:34:47.156+0000] {logging_mixin.py:149} INFO - 119:	learn: 8052849.6973058	total: 1m 23s	remaining: 10m 13s
+[2023-05-26T02:34:47.819+0000] {logging_mixin.py:149} INFO - 120:	learn: 8052715.7919695	total: 1m 24s	remaining: 10m 12s
+[2023-05-26T02:34:48.459+0000] {logging_mixin.py:149} INFO - 121:	learn: 8052704.1055437	total: 1m 24s	remaining: 10m 11s
+[2023-05-26T02:34:49.122+0000] {logging_mixin.py:149} INFO - 122:	learn: 8052685.4681813	total: 1m 25s	remaining: 10m 10s
+[2023-05-26T02:34:49.938+0000] {logging_mixin.py:149} INFO - 123:	learn: 8052683.5635771	total: 1m 26s	remaining: 10m 10s
+[2023-05-26T02:34:50.611+0000] {logging_mixin.py:149} INFO - 124:	learn: 8052670.9308172	total: 1m 27s	remaining: 10m 9s
+[2023-05-26T02:34:51.302+0000] {logging_mixin.py:149} INFO - 125:	learn: 8052669.6232451	total: 1m 27s	remaining: 10m 8s
+[2023-05-26T02:34:52.051+0000] {logging_mixin.py:149} INFO - 126:	learn: 8052630.3847384	total: 1m 28s	remaining: 10m 8s
+[2023-05-26T02:34:52.883+0000] {logging_mixin.py:149} INFO - 127:	learn: 8052629.4541926	total: 1m 29s	remaining: 10m 8s
+[2023-05-26T02:34:53.529+0000] {logging_mixin.py:149} INFO - 128:	learn: 8052588.3222497	total: 1m 30s	remaining: 10m 7s
+[2023-05-26T02:34:54.220+0000] {logging_mixin.py:149} INFO - 129:	learn: 8052511.4487965	total: 1m 30s	remaining: 10m 7s
+[2023-05-26T02:34:54.869+0000] {logging_mixin.py:149} INFO - 130:	learn: 8052446.4277505	total: 1m 31s	remaining: 10m 5s
+[2023-05-26T02:34:55.616+0000] {logging_mixin.py:149} INFO - 131:	learn: 8052340.2116618	total: 1m 32s	remaining: 10m 5s
+[2023-05-26T02:34:56.336+0000] {logging_mixin.py:149} INFO - 132:	learn: 8052271.8299921	total: 1m 32s	remaining: 10m 5s
+[2023-05-26T02:34:57.140+0000] {logging_mixin.py:149} INFO - 133:	learn: 8052190.2947984	total: 1m 33s	remaining: 10m 5s
+[2023-05-26T02:34:57.801+0000] {logging_mixin.py:149} INFO - 134:	learn: 8052164.3028834	total: 1m 34s	remaining: 10m 4s
+[2023-05-26T02:34:58.519+0000] {logging_mixin.py:149} INFO - 135:	learn: 8052112.7328605	total: 1m 35s	remaining: 10m 3s
+[2023-05-26T02:34:59.285+0000] {logging_mixin.py:149} INFO - 136:	learn: 8052045.9248275	total: 1m 35s	remaining: 10m 3s
+[2023-05-26T02:35:00.042+0000] {logging_mixin.py:149} INFO - 137:	learn: 8051976.7407941	total: 1m 36s	remaining: 10m 2s
+[2023-05-26T02:35:00.706+0000] {logging_mixin.py:149} INFO - 138:	learn: 8051935.1312599	total: 1m 37s	remaining: 10m 2s
+[2023-05-26T02:35:01.359+0000] {logging_mixin.py:149} INFO - 139:	learn: 8051885.8282678	total: 1m 37s	remaining: 10m 1s
+[2023-05-26T02:35:02.000+0000] {logging_mixin.py:149} INFO - 140:	learn: 8051850.4012328	total: 1m 38s	remaining: 9m 59s
+[2023-05-26T02:35:02.668+0000] {logging_mixin.py:149} INFO - 141:	learn: 8051804.9066138	total: 1m 39s	remaining: 9m 59s
+[2023-05-26T02:35:03.417+0000] {logging_mixin.py:149} INFO - 142:	learn: 8051765.1257194	total: 1m 39s	remaining: 9m 58s
+[2023-05-26T02:35:04.078+0000] {logging_mixin.py:149} INFO - 143:	learn: 8051714.1354132	total: 1m 40s	remaining: 9m 57s
+[2023-05-26T02:35:04.828+0000] {logging_mixin.py:149} INFO - 144:	learn: 8051673.8456005	total: 1m 41s	remaining: 9m 57s
+[2023-05-26T02:35:05.469+0000] {logging_mixin.py:149} INFO - 145:	learn: 8051632.5584695	total: 1m 41s	remaining: 9m 56s
+[2023-05-26T02:35:06.307+0000] {logging_mixin.py:149} INFO - 146:	learn: 8051631.3574190	total: 1m 42s	remaining: 9m 56s
+[2023-05-26T02:35:07.180+0000] {logging_mixin.py:149} INFO - 147:	learn: 8051630.7682982	total: 1m 43s	remaining: 9m 56s
+[2023-05-26T02:35:07.899+0000] {logging_mixin.py:149} INFO - 148:	learn: 8051565.6433887	total: 1m 44s	remaining: 9m 56s
+[2023-05-26T02:35:08.521+0000] {logging_mixin.py:149} INFO - 149:	learn: 8051525.2271742	total: 1m 45s	remaining: 9m 54s
+[2023-05-26T02:35:09.196+0000] {logging_mixin.py:149} INFO - 150:	learn: 8051504.9395625	total: 1m 45s	remaining: 9m 54s
+[2023-05-26T02:35:09.862+0000] {logging_mixin.py:149} INFO - 151:	learn: 8051488.5537490	total: 1m 46s	remaining: 9m 53s
+[2023-05-26T02:35:10.483+0000] {logging_mixin.py:149} INFO - 152:	learn: 8051485.9377289	total: 1m 46s	remaining: 9m 52s
+[2023-05-26T02:35:11.171+0000] {logging_mixin.py:149} INFO - 153:	learn: 8051453.5725155	total: 1m 47s	remaining: 9m 51s
+[2023-05-26T02:35:11.793+0000] {logging_mixin.py:149} INFO - 154:	learn: 8051449.4413925	total: 1m 48s	remaining: 9m 50s
+[2023-05-26T02:35:12.467+0000] {logging_mixin.py:149} INFO - 155:	learn: 8051399.1879522	total: 1m 48s	remaining: 9m 49s
+[2023-05-26T02:35:13.271+0000] {logging_mixin.py:149} INFO - 156:	learn: 8051398.4037787	total: 1m 49s	remaining: 9m 49s
+[2023-05-26T02:35:14.077+0000] {logging_mixin.py:149} INFO - 157:	learn: 8051325.0013842	total: 1m 50s	remaining: 9m 49s
+[2023-05-26T02:35:14.780+0000] {logging_mixin.py:149} INFO - 158:	learn: 8051277.2052304	total: 1m 51s	remaining: 9m 48s
+[2023-05-26T02:35:15.466+0000] {logging_mixin.py:149} INFO - 159:	learn: 8051252.6559560	total: 1m 51s	remaining: 9m 47s
+[2023-05-26T02:35:16.123+0000] {logging_mixin.py:149} INFO - 160:	learn: 8051235.6493054	total: 1m 52s	remaining: 9m 46s
+[2023-05-26T02:35:16.863+0000] {logging_mixin.py:149} INFO - 161:	learn: 8051199.2621490	total: 1m 53s	remaining: 9m 46s
+[2023-05-26T02:35:17.473+0000] {logging_mixin.py:149} INFO - 162:	learn: 8051192.1608446	total: 1m 53s	remaining: 9m 45s
+[2023-05-26T02:35:18.203+0000] {logging_mixin.py:149} INFO - 163:	learn: 8051190.9235807	total: 1m 54s	remaining: 9m 44s
+[2023-05-26T02:35:18.916+0000] {logging_mixin.py:149} INFO - 164:	learn: 8051189.7988885	total: 1m 55s	remaining: 9m 43s
+[2023-05-26T02:35:19.692+0000] {logging_mixin.py:149} INFO - 165:	learn: 8051189.1683708	total: 1m 56s	remaining: 9m 43s
+[2023-05-26T02:35:20.369+0000] {logging_mixin.py:149} INFO - 166:	learn: 8051177.8267602	total: 1m 56s	remaining: 9m 42s
+[2023-05-26T02:35:21.071+0000] {logging_mixin.py:149} INFO - 167:	learn: 8051135.8403584	total: 1m 57s	remaining: 9m 42s
+[2023-05-26T02:35:21.734+0000] {logging_mixin.py:149} INFO - 168:	learn: 8051125.9117558	total: 1m 58s	remaining: 9m 41s
+[2023-05-26T02:35:22.355+0000] {logging_mixin.py:149} INFO - 169:	learn: 8051124.9365533	total: 1m 58s	remaining: 9m 40s
+[2023-05-26T02:35:23.202+0000] {logging_mixin.py:149} INFO - 170:	learn: 8051124.4898477	total: 1m 59s	remaining: 9m 40s
+[2023-05-26T02:35:23.903+0000] {logging_mixin.py:149} INFO - 171:	learn: 8051071.0511201	total: 2m	remaining: 9m 39s
+[2023-05-26T02:35:24.577+0000] {logging_mixin.py:149} INFO - 172:	learn: 8051050.4496832	total: 2m 1s	remaining: 9m 38s
+[2023-05-26T02:35:25.229+0000] {logging_mixin.py:149} INFO - 173:	learn: 8051029.6397620	total: 2m 1s	remaining: 9m 37s
+[2023-05-26T02:35:25.952+0000] {logging_mixin.py:149} INFO - 174:	learn: 8050988.5175805	total: 2m 2s	remaining: 9m 37s
+[2023-05-26T02:35:26.644+0000] {logging_mixin.py:149} INFO - 175:	learn: 8050968.0646986	total: 2m 3s	remaining: 9m 36s
+[2023-05-26T02:35:27.442+0000] {logging_mixin.py:149} INFO - 176:	learn: 8050932.8569664	total: 2m 3s	remaining: 9m 36s
+[2023-05-26T02:35:28.113+0000] {logging_mixin.py:149} INFO - 177:	learn: 8050905.7185222	total: 2m 4s	remaining: 9m 35s
+[2023-05-26T02:35:28.743+0000] {logging_mixin.py:149} INFO - 178:	learn: 8050895.3001862	total: 2m 5s	remaining: 9m 34s
+[2023-05-26T02:35:29.525+0000] {logging_mixin.py:149} INFO - 179:	learn: 8050894.4278247	total: 2m 5s	remaining: 9m 33s
+[2023-05-26T02:35:30.312+0000] {logging_mixin.py:149} INFO - 180:	learn: 8050819.7965166	total: 2m 6s	remaining: 9m 33s
+[2023-05-26T02:35:31.056+0000] {logging_mixin.py:149} INFO - 181:	learn: 8050784.5892912	total: 2m 7s	remaining: 9m 33s
+[2023-05-26T02:35:31.715+0000] {logging_mixin.py:149} INFO - 182:	learn: 8050766.8250534	total: 2m 8s	remaining: 9m 32s
+[2023-05-26T02:35:32.303+0000] {logging_mixin.py:149} INFO - 183:	learn: 8050753.4545503	total: 2m 8s	remaining: 9m 31s
+[2023-05-26T02:35:32.954+0000] {logging_mixin.py:149} INFO - 184:	learn: 8050738.7061896	total: 2m 9s	remaining: 9m 30s
+[2023-05-26T02:35:33.640+0000] {logging_mixin.py:149} INFO - 185:	learn: 8050723.8699178	total: 2m 10s	remaining: 9m 29s
+[2023-05-26T02:35:34.486+0000] {logging_mixin.py:149} INFO - 186:	learn: 8050723.5767857	total: 2m 10s	remaining: 9m 29s
+[2023-05-26T02:35:35.073+0000] {logging_mixin.py:149} INFO - 187:	learn: 8050720.8064536	total: 2m 11s	remaining: 9m 28s
+[2023-05-26T02:35:35.704+0000] {logging_mixin.py:149} INFO - 188:	learn: 8050704.0298634	total: 2m 12s	remaining: 9m 27s
+[2023-05-26T02:35:36.494+0000] {logging_mixin.py:149} INFO - 189:	learn: 8050703.6348330	total: 2m 12s	remaining: 9m 26s
+[2023-05-26T02:35:37.153+0000] {logging_mixin.py:149} INFO - 190:	learn: 8050695.1214154	total: 2m 13s	remaining: 9m 25s
+[2023-05-26T02:35:37.873+0000] {logging_mixin.py:149} INFO - 191:	learn: 8050679.4680118	total: 2m 14s	remaining: 9m 25s
+[2023-05-26T02:35:38.593+0000] {logging_mixin.py:149} INFO - 192:	learn: 8050671.1485234	total: 2m 15s	remaining: 9m 24s
+[2023-05-26T02:35:39.327+0000] {logging_mixin.py:149} INFO - 193:	learn: 8050632.3638740	total: 2m 15s	remaining: 9m 24s
+[2023-05-26T02:35:40.070+0000] {logging_mixin.py:149} INFO - 194:	learn: 8050631.7862438	total: 2m 16s	remaining: 9m 23s
+[2023-05-26T02:35:40.888+0000] {logging_mixin.py:149} INFO - 195:	learn: 8050592.1573432	total: 2m 17s	remaining: 9m 23s
+[2023-05-26T02:35:41.481+0000] {logging_mixin.py:149} INFO - 196:	learn: 8050575.4603713	total: 2m 17s	remaining: 9m 22s
+[2023-05-26T02:35:42.327+0000] {logging_mixin.py:149} INFO - 197:	learn: 8050574.7047409	total: 2m 18s	remaining: 9m 22s
+[2023-05-26T02:35:43.092+0000] {logging_mixin.py:149} INFO - 198:	learn: 8050574.2839794	total: 2m 19s	remaining: 9m 21s
+[2023-05-26T02:35:43.767+0000] {logging_mixin.py:149} INFO - 199:	learn: 8050526.6343583	total: 2m 20s	remaining: 9m 20s
+[2023-05-26T02:35:44.389+0000] {logging_mixin.py:149} INFO - 200:	learn: 8050525.2107995	total: 2m 20s	remaining: 9m 19s
+[2023-05-26T02:35:45.128+0000] {logging_mixin.py:149} INFO - 201:	learn: 8050480.9264610	total: 2m 21s	remaining: 9m 19s
+[2023-05-26T02:35:45.707+0000] {logging_mixin.py:149} INFO - 202:	learn: 8050477.7274420	total: 2m 22s	remaining: 9m 18s
+[2023-05-26T02:35:46.467+0000] {logging_mixin.py:149} INFO - 203:	learn: 8050477.2694054	total: 2m 22s	remaining: 9m 17s
+[2023-05-26T02:35:47.166+0000] {logging_mixin.py:149} INFO - 204:	learn: 8050468.6571593	total: 2m 23s	remaining: 9m 16s
+[2023-05-26T02:35:47.836+0000] {logging_mixin.py:149} INFO - 205:	learn: 8050466.3754309	total: 2m 24s	remaining: 9m 16s
+[2023-05-26T02:35:48.510+0000] {logging_mixin.py:149} INFO - 206:	learn: 8050419.8189683	total: 2m 24s	remaining: 9m 15s
+[2023-05-26T02:35:49.134+0000] {logging_mixin.py:149} INFO - 207:	learn: 8050418.6401630	total: 2m 25s	remaining: 9m 14s
+[2023-05-26T02:35:49.862+0000] {logging_mixin.py:149} INFO - 208:	learn: 8050416.9439060	total: 2m 26s	remaining: 9m 13s
+[2023-05-26T02:35:50.498+0000] {logging_mixin.py:149} INFO - 209:	learn: 8050404.0950646	total: 2m 26s	remaining: 9m 12s
+[2023-05-26T02:35:51.164+0000] {logging_mixin.py:149} INFO - 210:	learn: 8050400.1889556	total: 2m 27s	remaining: 9m 12s
+[2023-05-26T02:35:51.837+0000] {logging_mixin.py:149} INFO - 211:	learn: 8050387.4271602	total: 2m 28s	remaining: 9m 11s
+[2023-05-26T02:35:52.502+0000] {logging_mixin.py:149} INFO - 212:	learn: 8050353.8580254	total: 2m 28s	remaining: 9m 10s
+[2023-05-26T02:35:53.211+0000] {logging_mixin.py:149} INFO - 213:	learn: 8050348.3729820	total: 2m 29s	remaining: 9m 9s
+[2023-05-26T02:35:53.868+0000] {logging_mixin.py:149} INFO - 214:	learn: 8050338.3879283	total: 2m 30s	remaining: 9m 8s
+[2023-05-26T02:35:54.548+0000] {logging_mixin.py:149} INFO - 215:	learn: 8050322.3384094	total: 2m 31s	remaining: 9m 8s
+[2023-05-26T02:35:55.212+0000] {logging_mixin.py:149} INFO - 216:	learn: 8050312.2458047	total: 2m 31s	remaining: 9m 7s
+[2023-05-26T02:35:55.878+0000] {logging_mixin.py:149} INFO - 217:	learn: 8050305.0531446	total: 2m 32s	remaining: 9m 6s
+[2023-05-26T02:35:56.638+0000] {logging_mixin.py:149} INFO - 218:	learn: 8050300.2204351	total: 2m 33s	remaining: 9m 5s
+[2023-05-26T02:35:57.326+0000] {logging_mixin.py:149} INFO - 219:	learn: 8050266.5524488	total: 2m 33s	remaining: 9m 5s
+[2023-05-26T02:35:57.929+0000] {logging_mixin.py:149} INFO - 220:	learn: 8050264.8775637	total: 2m 34s	remaining: 9m 4s
+[2023-05-26T02:35:58.569+0000] {logging_mixin.py:149} INFO - 221:	learn: 8050259.8280601	total: 2m 35s	remaining: 9m 3s
+[2023-05-26T02:35:59.312+0000] {logging_mixin.py:149} INFO - 222:	learn: 8050226.6388681	total: 2m 35s	remaining: 9m 2s
+[2023-05-26T02:36:00.060+0000] {logging_mixin.py:149} INFO - 223:	learn: 8050226.3163353	total: 2m 36s	remaining: 9m 2s
+[2023-05-26T02:36:00.700+0000] {logging_mixin.py:149} INFO - 224:	learn: 8050217.8469397	total: 2m 37s	remaining: 9m 1s
+[2023-05-26T02:36:01.389+0000] {logging_mixin.py:149} INFO - 225:	learn: 8050196.9791288	total: 2m 37s	remaining: 9m
+[2023-05-26T02:36:02.025+0000] {logging_mixin.py:149} INFO - 226:	learn: 8050188.8610494	total: 2m 38s	remaining: 8m 59s
+[2023-05-26T02:36:02.724+0000] {logging_mixin.py:149} INFO - 227:	learn: 8050186.3019113	total: 2m 39s	remaining: 8m 58s
+[2023-05-26T02:36:03.424+0000] {logging_mixin.py:149} INFO - 228:	learn: 8050179.1013298	total: 2m 39s	remaining: 8m 58s
+[2023-05-26T02:36:04.044+0000] {logging_mixin.py:149} INFO - 229:	learn: 8050177.2238600	total: 2m 40s	remaining: 8m 57s
+[2023-05-26T02:36:04.766+0000] {logging_mixin.py:149} INFO - 230:	learn: 8050159.3416704	total: 2m 41s	remaining: 8m 56s
+[2023-05-26T02:36:05.512+0000] {logging_mixin.py:149} INFO - 231:	learn: 8050144.4939416	total: 2m 41s	remaining: 8m 56s
+[2023-05-26T02:36:06.207+0000] {logging_mixin.py:149} INFO - 232:	learn: 8050117.0181901	total: 2m 42s	remaining: 8m 55s
+[2023-05-26T02:36:06.948+0000] {logging_mixin.py:149} INFO - 233:	learn: 8050099.2741243	total: 2m 43s	remaining: 8m 54s
+[2023-05-26T02:36:07.649+0000] {logging_mixin.py:149} INFO - 234:	learn: 8050072.2140661	total: 2m 44s	remaining: 8m 54s
+[2023-05-26T02:36:08.385+0000] {logging_mixin.py:149} INFO - 235:	learn: 8050048.6229171	total: 2m 44s	remaining: 8m 53s
+[2023-05-26T02:36:09.204+0000] {logging_mixin.py:149} INFO - 236:	learn: 8050048.3204378	total: 2m 45s	remaining: 8m 53s
+[2023-05-26T02:36:09.983+0000] {logging_mixin.py:149} INFO - 237:	learn: 8050047.8811524	total: 2m 46s	remaining: 8m 52s
+[2023-05-26T02:36:10.621+0000] {logging_mixin.py:149} INFO - 238:	learn: 8050039.2468884	total: 2m 47s	remaining: 8m 51s
+[2023-05-26T02:36:11.466+0000] {logging_mixin.py:149} INFO - 239:	learn: 8050039.0551323	total: 2m 47s	remaining: 8m 51s
+[2023-05-26T02:36:12.099+0000] {logging_mixin.py:149} INFO - 240:	learn: 8050021.9004745	total: 2m 48s	remaining: 8m 50s
+[2023-05-26T02:36:12.815+0000] {logging_mixin.py:149} INFO - 241:	learn: 8049995.5393251	total: 2m 49s	remaining: 8m 50s
+[2023-05-26T02:36:13.541+0000] {logging_mixin.py:149} INFO - 242:	learn: 8049973.2565733	total: 2m 49s	remaining: 8m 49s
+[2023-05-26T02:36:14.259+0000] {logging_mixin.py:149} INFO - 243:	learn: 8049957.2469423	total: 2m 50s	remaining: 8m 48s
+[2023-05-26T02:36:14.924+0000] {logging_mixin.py:149} INFO - 244:	learn: 8049950.9019321	total: 2m 51s	remaining: 8m 48s
+[2023-05-26T02:36:15.581+0000] {logging_mixin.py:149} INFO - 245:	learn: 8049944.2931640	total: 2m 52s	remaining: 8m 47s
+[2023-05-26T02:36:16.354+0000] {logging_mixin.py:149} INFO - 246:	learn: 8049922.4450265	total: 2m 52s	remaining: 8m 46s
+[2023-05-26T02:36:17.089+0000] {logging_mixin.py:149} INFO - 247:	learn: 8049905.9592358	total: 2m 53s	remaining: 8m 46s
+[2023-05-26T02:36:17.746+0000] {logging_mixin.py:149} INFO - 248:	learn: 8049897.0859613	total: 2m 54s	remaining: 8m 45s
+[2023-05-26T02:36:18.579+0000] {logging_mixin.py:149} INFO - 249:	learn: 8049896.9958473	total: 2m 55s	remaining: 8m 45s
+[2023-05-26T02:36:19.229+0000] {logging_mixin.py:149} INFO - 250:	learn: 8049895.8369354	total: 2m 55s	remaining: 8m 44s
+[2023-05-26T02:36:19.873+0000] {logging_mixin.py:149} INFO - 251:	learn: 8049883.8808617	total: 2m 56s	remaining: 8m 43s
+[2023-05-26T02:36:20.638+0000] {logging_mixin.py:149} INFO - 252:	learn: 8049842.9455247	total: 2m 57s	remaining: 8m 42s
+[2023-05-26T02:36:21.245+0000] {logging_mixin.py:149} INFO - 253:	learn: 8049842.4287968	total: 2m 57s	remaining: 8m 41s
+[2023-05-26T02:36:21.932+0000] {logging_mixin.py:149} INFO - 254:	learn: 8049833.0187352	total: 2m 58s	remaining: 8m 41s
+[2023-05-26T02:36:22.734+0000] {logging_mixin.py:149} INFO - 255:	learn: 8049808.9607275	total: 2m 59s	remaining: 8m 40s
+[2023-05-26T02:36:23.478+0000] {logging_mixin.py:149} INFO - 256:	learn: 8049783.1659860	total: 2m 59s	remaining: 8m 40s
+[2023-05-26T02:36:24.219+0000] {logging_mixin.py:149} INFO - 257:	learn: 8049761.9800195	total: 3m	remaining: 8m 39s
+[2023-05-26T02:36:24.924+0000] {logging_mixin.py:149} INFO - 258:	learn: 8049747.2449823	total: 3m 1s	remaining: 8m 38s
+[2023-05-26T02:36:25.716+0000] {logging_mixin.py:149} INFO - 259:	learn: 8049737.1684339	total: 3m 2s	remaining: 8m 38s
+[2023-05-26T02:36:26.366+0000] {logging_mixin.py:149} INFO - 260:	learn: 8049730.5041546	total: 3m 2s	remaining: 8m 37s
+[2023-05-26T02:36:27.119+0000] {logging_mixin.py:149} INFO - 261:	learn: 8049715.6228782	total: 3m 3s	remaining: 8m 37s
+[2023-05-26T02:36:27.840+0000] {logging_mixin.py:149} INFO - 262:	learn: 8049715.3753450	total: 3m 4s	remaining: 8m 36s
+[2023-05-26T02:36:28.447+0000] {logging_mixin.py:149} INFO - 263:	learn: 8049710.7954234	total: 3m 4s	remaining: 8m 35s
+[2023-05-26T02:36:29.111+0000] {logging_mixin.py:149} INFO - 264:	learn: 8049697.8835116	total: 3m 5s	remaining: 8m 34s
+[2023-05-26T02:36:29.793+0000] {logging_mixin.py:149} INFO - 265:	learn: 8049688.6359178	total: 3m 6s	remaining: 8m 33s
+[2023-05-26T02:36:30.464+0000] {logging_mixin.py:149} INFO - 266:	learn: 8049671.6512008	total: 3m 6s	remaining: 8m 33s
+[2023-05-26T02:36:31.176+0000] {logging_mixin.py:149} INFO - 267:	learn: 8049658.4948152	total: 3m 7s	remaining: 8m 32s
+[2023-05-26T02:36:31.786+0000] {logging_mixin.py:149} INFO - 268:	learn: 8049651.4554832	total: 3m 8s	remaining: 8m 31s
+[2023-05-26T02:36:32.440+0000] {logging_mixin.py:149} INFO - 269:	learn: 8049641.0588329	total: 3m 8s	remaining: 8m 30s
+[2023-05-26T02:36:33.045+0000] {logging_mixin.py:149} INFO - 270:	learn: 8049638.4302924	total: 3m 9s	remaining: 8m 29s
+[2023-05-26T02:36:33.688+0000] {logging_mixin.py:149} INFO - 271:	learn: 8049634.3933410	total: 3m 10s	remaining: 8m 28s
+[2023-05-26T02:36:34.398+0000] {logging_mixin.py:149} INFO - 272:	learn: 8049626.9855965	total: 3m 10s	remaining: 8m 28s
+[2023-05-26T02:36:35.169+0000] {logging_mixin.py:149} INFO - 273:	learn: 8049612.5550383	total: 3m 11s	remaining: 8m 27s
+[2023-05-26T02:36:35.867+0000] {logging_mixin.py:149} INFO - 274:	learn: 8049612.2083667	total: 3m 12s	remaining: 8m 26s
+[2023-05-26T02:36:36.475+0000] {logging_mixin.py:149} INFO - 275:	learn: 8049611.1616266	total: 3m 12s	remaining: 8m 26s
+[2023-05-26T02:36:37.141+0000] {logging_mixin.py:149} INFO - 276:	learn: 8049591.7204554	total: 3m 13s	remaining: 8m 25s
+[2023-05-26T02:36:37.913+0000] {logging_mixin.py:149} INFO - 277:	learn: 8049591.4738303	total: 3m 14s	remaining: 8m 24s
+[2023-05-26T02:36:38.652+0000] {logging_mixin.py:149} INFO - 278:	learn: 8049573.6702646	total: 3m 15s	remaining: 8m 24s
+[2023-05-26T02:36:39.307+0000] {logging_mixin.py:149} INFO - 279:	learn: 8049568.4328331	total: 3m 15s	remaining: 8m 23s
+[2023-05-26T02:36:40.043+0000] {logging_mixin.py:149} INFO - 280:	learn: 8049548.1309790	total: 3m 16s	remaining: 8m 22s
+[2023-05-26T02:36:40.812+0000] {logging_mixin.py:149} INFO - 281:	learn: 8049548.0778359	total: 3m 17s	remaining: 8m 22s
+[2023-05-26T02:36:41.500+0000] {logging_mixin.py:149} INFO - 282:	learn: 8049547.9041651	total: 3m 17s	remaining: 8m 21s
+[2023-05-26T02:36:42.286+0000] {logging_mixin.py:149} INFO - 283:	learn: 8049547.6826975	total: 3m 18s	remaining: 8m 21s
+[2023-05-26T02:36:42.989+0000] {logging_mixin.py:149} INFO - 284:	learn: 8049540.8204984	total: 3m 19s	remaining: 8m 20s
+[2023-05-26T02:36:43.617+0000] {logging_mixin.py:149} INFO - 285:	learn: 8049537.7522119	total: 3m 20s	remaining: 8m 19s
+[2023-05-26T02:36:44.280+0000] {logging_mixin.py:149} INFO - 286:	learn: 8049529.2644823	total: 3m 20s	remaining: 8m 18s
+[2023-05-26T02:36:45.042+0000] {logging_mixin.py:149} INFO - 287:	learn: 8049505.0681130	total: 3m 21s	remaining: 8m 18s
+[2023-05-26T02:36:45.829+0000] {logging_mixin.py:149} INFO - 288:	learn: 8049487.1406227	total: 3m 22s	remaining: 8m 17s
+[2023-05-26T02:36:46.514+0000] {logging_mixin.py:149} INFO - 289:	learn: 8049480.4504277	total: 3m 22s	remaining: 8m 16s
+[2023-05-26T02:36:47.270+0000] {logging_mixin.py:149} INFO - 290:	learn: 8049466.6546922	total: 3m 23s	remaining: 8m 16s
+[2023-05-26T02:36:47.973+0000] {logging_mixin.py:149} INFO - 291:	learn: 8049465.2940759	total: 3m 24s	remaining: 8m 15s
+[2023-05-26T02:36:48.799+0000] {logging_mixin.py:149} INFO - 292:	learn: 8049459.6256510	total: 3m 25s	remaining: 8m 15s
+[2023-05-26T02:36:49.581+0000] {logging_mixin.py:149} INFO - 293:	learn: 8049450.4128043	total: 3m 26s	remaining: 8m 14s
+[2023-05-26T02:36:50.260+0000] {logging_mixin.py:149} INFO - 294:	learn: 8049440.7299095	total: 3m 26s	remaining: 8m 13s
+[2023-05-26T02:36:51.063+0000] {logging_mixin.py:149} INFO - 295:	learn: 8049432.8487484	total: 3m 27s	remaining: 8m 13s
+[2023-05-26T02:36:51.724+0000] {logging_mixin.py:149} INFO - 296:	learn: 8049416.8623649	total: 3m 28s	remaining: 8m 12s
+[2023-05-26T02:36:52.459+0000] {logging_mixin.py:149} INFO - 297:	learn: 8049393.0145493	total: 3m 28s	remaining: 8m 12s
+[2023-05-26T02:36:53.286+0000] {logging_mixin.py:149} INFO - 298:	learn: 8049392.8443760	total: 3m 29s	remaining: 8m 11s
+[2023-05-26T02:36:53.961+0000] {logging_mixin.py:149} INFO - 299:	learn: 8049392.6004483	total: 3m 30s	remaining: 8m 10s
+[2023-05-26T02:36:54.767+0000] {logging_mixin.py:149} INFO - 300:	learn: 8049377.0352508	total: 3m 31s	remaining: 8m 10s
+[2023-05-26T02:36:55.487+0000] {logging_mixin.py:149} INFO - 301:	learn: 8049365.0099820	total: 3m 31s	remaining: 8m 9s
+[2023-05-26T02:36:56.152+0000] {logging_mixin.py:149} INFO - 302:	learn: 8049362.5834325	total: 3m 32s	remaining: 8m 9s
+[2023-05-26T02:36:56.813+0000] {logging_mixin.py:149} INFO - 303:	learn: 8049359.0910734	total: 3m 33s	remaining: 8m 8s
+[2023-05-26T02:36:57.484+0000] {logging_mixin.py:149} INFO - 304:	learn: 8049324.2443381	total: 3m 33s	remaining: 8m 7s
+[2023-05-26T02:36:58.276+0000] {logging_mixin.py:149} INFO - 305:	learn: 8049319.8847582	total: 3m 34s	remaining: 8m 6s
+[2023-05-26T02:36:58.915+0000] {logging_mixin.py:149} INFO - 306:	learn: 8049315.0362885	total: 3m 35s	remaining: 8m 6s
+[2023-05-26T02:36:59.671+0000] {logging_mixin.py:149} INFO - 307:	learn: 8049300.4903831	total: 3m 36s	remaining: 8m 5s
+[2023-05-26T02:37:00.434+0000] {logging_mixin.py:149} INFO - 308:	learn: 8049277.2769344	total: 3m 36s	remaining: 8m 4s
+[2023-05-26T02:37:01.105+0000] {logging_mixin.py:149} INFO - 309:	learn: 8049269.1178271	total: 3m 37s	remaining: 8m 4s
+[2023-05-26T02:37:01.748+0000] {logging_mixin.py:149} INFO - 310:	learn: 8049258.4473309	total: 3m 38s	remaining: 8m 3s
+[2023-05-26T02:37:02.424+0000] {logging_mixin.py:149} INFO - 311:	learn: 8049249.7362417	total: 3m 38s	remaining: 8m 2s
+[2023-05-26T02:37:03.055+0000] {logging_mixin.py:149} INFO - 312:	learn: 8049235.1873436	total: 3m 39s	remaining: 8m 1s
+[2023-05-26T02:37:03.760+0000] {logging_mixin.py:149} INFO - 313:	learn: 8049221.7683159	total: 3m 40s	remaining: 8m 1s
+[2023-05-26T02:37:04.368+0000] {logging_mixin.py:149} INFO - 314:	learn: 8049219.4016542	total: 3m 40s	remaining: 8m
+[2023-05-26T02:37:04.998+0000] {logging_mixin.py:149} INFO - 315:	learn: 8049217.8255977	total: 3m 41s	remaining: 7m 59s
+[2023-05-26T02:37:05.653+0000] {logging_mixin.py:149} INFO - 316:	learn: 8049217.4972738	total: 3m 42s	remaining: 7m 58s
+[2023-05-26T02:37:06.450+0000] {logging_mixin.py:149} INFO - 317:	learn: 8049206.3464383	total: 3m 42s	remaining: 7m 57s
+[2023-05-26T02:37:07.238+0000] {logging_mixin.py:149} INFO - 318:	learn: 8049193.6613217	total: 3m 43s	remaining: 7m 57s
+[2023-05-26T02:37:07.979+0000] {logging_mixin.py:149} INFO - 319:	learn: 8049184.7252530	total: 3m 44s	remaining: 7m 56s
+[2023-05-26T02:37:08.758+0000] {logging_mixin.py:149} INFO - 320:	learn: 8049178.7720486	total: 3m 45s	remaining: 7m 56s
+[2023-05-26T02:37:09.600+0000] {logging_mixin.py:149} INFO - 321:	learn: 8049174.0857122	total: 3m 46s	remaining: 7m 55s
+[2023-05-26T02:37:10.258+0000] {logging_mixin.py:149} INFO - 322:	learn: 8049156.3032417	total: 3m 46s	remaining: 7m 55s
+[2023-05-26T02:37:10.876+0000] {logging_mixin.py:149} INFO - 323:	learn: 8049152.7422806	total: 3m 47s	remaining: 7m 54s
+[2023-05-26T02:37:11.605+0000] {logging_mixin.py:149} INFO - 324:	learn: 8049141.5914117	total: 3m 48s	remaining: 7m 53s
+[2023-05-26T02:37:12.320+0000] {logging_mixin.py:149} INFO - 325:	learn: 8049133.9866581	total: 3m 48s	remaining: 7m 52s
+[2023-05-26T02:37:13.027+0000] {logging_mixin.py:149} INFO - 326:	learn: 8049124.8181116	total: 3m 49s	remaining: 7m 52s
+[2023-05-26T02:37:13.727+0000] {logging_mixin.py:149} INFO - 327:	learn: 8049124.6594897	total: 3m 50s	remaining: 7m 51s
+[2023-05-26T02:37:14.297+0000] {logging_mixin.py:149} INFO - 328:	learn: 8049123.2076513	total: 3m 50s	remaining: 7m 50s
+[2023-05-26T02:37:15.071+0000] {logging_mixin.py:149} INFO - 329:	learn: 8049112.9087410	total: 3m 51s	remaining: 7m 49s
+[2023-05-26T02:37:15.770+0000] {logging_mixin.py:149} INFO - 330:	learn: 8049104.5877029	total: 3m 52s	remaining: 7m 49s
+[2023-05-26T02:37:16.625+0000] {logging_mixin.py:149} INFO - 331:	learn: 8049104.4100284	total: 3m 53s	remaining: 7m 48s
+[2023-05-26T02:37:17.432+0000] {logging_mixin.py:149} INFO - 332:	learn: 8049104.2905624	total: 3m 53s	remaining: 7m 48s
+[2023-05-26T02:37:18.155+0000] {logging_mixin.py:149} INFO - 333:	learn: 8049098.2073256	total: 3m 54s	remaining: 7m 47s
+[2023-05-26T02:37:18.806+0000] {logging_mixin.py:149} INFO - 334:	learn: 8049091.5625977	total: 3m 55s	remaining: 7m 46s
+[2023-05-26T02:37:19.464+0000] {logging_mixin.py:149} INFO - 335:	learn: 8049090.8677627	total: 3m 55s	remaining: 7m 46s
+[2023-05-26T02:37:20.196+0000] {logging_mixin.py:149} INFO - 336:	learn: 8049079.7437021	total: 3m 56s	remaining: 7m 45s
+[2023-05-26T02:37:20.906+0000] {logging_mixin.py:149} INFO - 337:	learn: 8049073.9421444	total: 3m 57s	remaining: 7m 44s
+[2023-05-26T02:37:21.664+0000] {logging_mixin.py:149} INFO - 338:	learn: 8049060.7239245	total: 3m 58s	remaining: 7m 44s
+[2023-05-26T02:37:22.441+0000] {logging_mixin.py:149} INFO - 339:	learn: 8049052.0463252	total: 3m 58s	remaining: 7m 43s
+[2023-05-26T02:37:23.148+0000] {logging_mixin.py:149} INFO - 340:	learn: 8049051.9819315	total: 3m 59s	remaining: 7m 42s
+[2023-05-26T02:37:23.836+0000] {logging_mixin.py:149} INFO - 341:	learn: 8049048.4871655	total: 4m	remaining: 7m 42s
+[2023-05-26T02:37:24.611+0000] {logging_mixin.py:149} INFO - 342:	learn: 8049042.0284320	total: 4m 1s	remaining: 7m 41s
+[2023-05-26T02:37:25.373+0000] {logging_mixin.py:149} INFO - 343:	learn: 8049036.2446088	total: 4m 1s	remaining: 7m 41s
+[2023-05-26T02:37:26.085+0000] {logging_mixin.py:149} INFO - 344:	learn: 8049022.0807844	total: 4m 2s	remaining: 7m 40s
+[2023-05-26T02:37:26.821+0000] {logging_mixin.py:149} INFO - 345:	learn: 8049015.3101160	total: 4m 3s	remaining: 7m 39s
+[2023-05-26T02:37:27.511+0000] {logging_mixin.py:149} INFO - 346:	learn: 8049011.5267995	total: 4m 3s	remaining: 7m 39s
+[2023-05-26T02:37:28.363+0000] {logging_mixin.py:149} INFO - 347:	learn: 8049011.4568347	total: 4m 4s	remaining: 7m 38s
+[2023-05-26T02:37:29.021+0000] {logging_mixin.py:149} INFO - 348:	learn: 8049007.0182253	total: 4m 5s	remaining: 7m 37s
+[2023-05-26T02:37:29.688+0000] {logging_mixin.py:149} INFO - 349:	learn: 8049003.9597679	total: 4m 6s	remaining: 7m 37s
+[2023-05-26T02:37:30.385+0000] {logging_mixin.py:149} INFO - 350:	learn: 8048991.5792535	total: 4m 6s	remaining: 7m 36s
+[2023-05-26T02:37:31.076+0000] {logging_mixin.py:149} INFO - 351:	learn: 8048982.9230259	total: 4m 7s	remaining: 7m 35s
+[2023-05-26T02:37:31.717+0000] {logging_mixin.py:149} INFO - 352:	learn: 8048978.2408755	total: 4m 8s	remaining: 7m 34s
+[2023-05-26T02:37:32.480+0000] {logging_mixin.py:149} INFO - 353:	learn: 8048968.5422912	total: 4m 8s	remaining: 7m 34s
+[2023-05-26T02:37:33.145+0000] {logging_mixin.py:149} INFO - 354:	learn: 8048968.2073931	total: 4m 9s	remaining: 7m 33s
+[2023-05-26T02:37:33.774+0000] {logging_mixin.py:149} INFO - 355:	learn: 8048964.1133441	total: 4m 10s	remaining: 7m 32s
+[2023-05-26T02:37:34.462+0000] {logging_mixin.py:149} INFO - 356:	learn: 8048957.6599100	total: 4m 10s	remaining: 7m 31s
+[2023-05-26T02:37:35.046+0000] {logging_mixin.py:149} INFO - 357:	learn: 8048950.9123260	total: 4m 11s	remaining: 7m 30s
+[2023-05-26T02:37:35.699+0000] {logging_mixin.py:149} INFO - 358:	learn: 8048939.4651841	total: 4m 12s	remaining: 7m 30s
+[2023-05-26T02:37:36.304+0000] {logging_mixin.py:149} INFO - 359:	learn: 8048937.3320388	total: 4m 12s	remaining: 7m 29s
+[2023-05-26T02:37:37.014+0000] {logging_mixin.py:149} INFO - 360:	learn: 8048927.4922454	total: 4m 13s	remaining: 7m 28s
+[2023-05-26T02:37:37.758+0000] {logging_mixin.py:149} INFO - 361:	learn: 8048919.1230998	total: 4m 14s	remaining: 7m 27s
+[2023-05-26T02:37:38.517+0000] {logging_mixin.py:149} INFO - 362:	learn: 8048913.7463753	total: 4m 14s	remaining: 7m 27s
+[2023-05-26T02:37:39.275+0000] {logging_mixin.py:149} INFO - 363:	learn: 8048909.5293863	total: 4m 15s	remaining: 7m 26s
+[2023-05-26T02:37:40.022+0000] {logging_mixin.py:149} INFO - 364:	learn: 8048897.9474078	total: 4m 16s	remaining: 7m 26s
+[2023-05-26T02:37:40.730+0000] {logging_mixin.py:149} INFO - 365:	learn: 8048895.4470166	total: 4m 17s	remaining: 7m 25s
+[2023-05-26T02:37:41.472+0000] {logging_mixin.py:149} INFO - 366:	learn: 8048888.3628035	total: 4m 17s	remaining: 7m 24s
+[2023-05-26T02:37:42.200+0000] {logging_mixin.py:149} INFO - 367:	learn: 8048887.7918358	total: 4m 18s	remaining: 7m 24s
+[2023-05-26T02:37:42.875+0000] {logging_mixin.py:149} INFO - 368:	learn: 8048885.8023412	total: 4m 19s	remaining: 7m 23s
+[2023-05-26T02:37:43.444+0000] {logging_mixin.py:149} INFO - 369:	learn: 8048880.8804263	total: 4m 19s	remaining: 7m 22s
+[2023-05-26T02:37:44.251+0000] {logging_mixin.py:149} INFO - 370:	learn: 8048880.8293329	total: 4m 20s	remaining: 7m 21s
+[2023-05-26T02:37:45.038+0000] {logging_mixin.py:149} INFO - 371:	learn: 8048880.7113625	total: 4m 21s	remaining: 7m 21s
+[2023-05-26T02:37:45.763+0000] {logging_mixin.py:149} INFO - 372:	learn: 8048872.2618446	total: 4m 22s	remaining: 7m 20s
+[2023-05-26T02:37:46.523+0000] {logging_mixin.py:149} INFO - 373:	learn: 8048856.8147278	total: 4m 22s	remaining: 7m 20s
+[2023-05-26T02:37:47.126+0000] {logging_mixin.py:149} INFO - 374:	learn: 8048855.8078543	total: 4m 23s	remaining: 7m 19s
+[2023-05-26T02:37:47.865+0000] {logging_mixin.py:149} INFO - 375:	learn: 8048848.4014761	total: 4m 24s	remaining: 7m 18s
+[2023-05-26T02:37:48.516+0000] {logging_mixin.py:149} INFO - 376:	learn: 8048840.1399387	total: 4m 24s	remaining: 7m 17s
+[2023-05-26T02:37:49.216+0000] {logging_mixin.py:149} INFO - 377:	learn: 8048833.6732929	total: 4m 25s	remaining: 7m 17s
+[2023-05-26T02:37:49.998+0000] {logging_mixin.py:149} INFO - 378:	learn: 8048827.5927417	total: 4m 26s	remaining: 7m 16s
+[2023-05-26T02:37:50.623+0000] {logging_mixin.py:149} INFO - 379:	learn: 8048825.3733011	total: 4m 27s	remaining: 7m 15s
+[2023-05-26T02:37:51.260+0000] {logging_mixin.py:149} INFO - 380:	learn: 8048822.3566908	total: 4m 27s	remaining: 7m 14s
+[2023-05-26T02:37:51.925+0000] {logging_mixin.py:149} INFO - 381:	learn: 8048819.3684518	total: 4m 28s	remaining: 7m 14s
+[2023-05-26T02:37:52.610+0000] {logging_mixin.py:149} INFO - 382:	learn: 8048812.3936540	total: 4m 29s	remaining: 7m 13s
+[2023-05-26T02:37:53.264+0000] {logging_mixin.py:149} INFO - 383:	learn: 8048810.5520700	total: 4m 29s	remaining: 7m 12s
+[2023-05-26T02:37:53.902+0000] {logging_mixin.py:149} INFO - 384:	learn: 8048805.9124188	total: 4m 30s	remaining: 7m 11s
+[2023-05-26T02:37:54.568+0000] {logging_mixin.py:149} INFO - 385:	learn: 8048803.3523782	total: 4m 30s	remaining: 7m 11s
+[2023-05-26T02:37:55.338+0000] {logging_mixin.py:149} INFO - 386:	learn: 8048792.2677994	total: 4m 31s	remaining: 7m 10s
+[2023-05-26T02:37:56.052+0000] {logging_mixin.py:149} INFO - 387:	learn: 8048775.6731655	total: 4m 32s	remaining: 7m 9s
+[2023-05-26T02:37:56.777+0000] {logging_mixin.py:149} INFO - 388:	learn: 8048769.8034787	total: 4m 33s	remaining: 7m 9s
+[2023-05-26T02:37:57.455+0000] {logging_mixin.py:149} INFO - 389:	learn: 8048769.4546902	total: 4m 33s	remaining: 7m 8s
+[2023-05-26T02:37:58.252+0000] {logging_mixin.py:149} INFO - 390:	learn: 8048765.9023079	total: 4m 34s	remaining: 7m 7s
+[2023-05-26T02:37:58.999+0000] {logging_mixin.py:149} INFO - 391:	learn: 8048757.6789694	total: 4m 35s	remaining: 7m 7s
+[2023-05-26T02:37:59.629+0000] {logging_mixin.py:149} INFO - 392:	learn: 8048753.8406516	total: 4m 36s	remaining: 7m 6s
+[2023-05-26T02:38:00.345+0000] {logging_mixin.py:149} INFO - 393:	learn: 8048750.8906076	total: 4m 36s	remaining: 7m 5s
+[2023-05-26T02:38:01.009+0000] {logging_mixin.py:149} INFO - 394:	learn: 8048744.9941123	total: 4m 37s	remaining: 7m 4s
+[2023-05-26T02:38:01.724+0000] {logging_mixin.py:149} INFO - 395:	learn: 8048735.3772943	total: 4m 38s	remaining: 7m 4s
+[2023-05-26T02:38:02.486+0000] {logging_mixin.py:149} INFO - 396:	learn: 8048735.2475942	total: 4m 38s	remaining: 7m 3s
+[2023-05-26T02:38:03.136+0000] {logging_mixin.py:149} INFO - 397:	learn: 8048734.6003164	total: 4m 39s	remaining: 7m 2s
+[2023-05-26T02:38:03.746+0000] {logging_mixin.py:149} INFO - 398:	learn: 8048734.3130371	total: 4m 40s	remaining: 7m 1s
+[2023-05-26T02:38:04.376+0000] {logging_mixin.py:149} INFO - 399:	learn: 8048733.2747902	total: 4m 40s	remaining: 7m 1s
+[2023-05-26T02:38:04.963+0000] {logging_mixin.py:149} INFO - 400:	learn: 8048732.5924387	total: 4m 41s	remaining: 7m
+[2023-05-26T02:38:05.635+0000] {logging_mixin.py:149} INFO - 401:	learn: 8048730.4458407	total: 4m 42s	remaining: 6m 59s
+[2023-05-26T02:38:06.267+0000] {logging_mixin.py:149} INFO - 402:	learn: 8048730.1331440	total: 4m 42s	remaining: 6m 58s
+[2023-05-26T02:38:07.027+0000] {logging_mixin.py:149} INFO - 403:	learn: 8048716.3390267	total: 4m 43s	remaining: 6m 58s
+[2023-05-26T02:38:07.683+0000] {logging_mixin.py:149} INFO - 404:	learn: 8048715.9062609	total: 4m 44s	remaining: 6m 57s
+[2023-05-26T02:38:08.471+0000] {logging_mixin.py:149} INFO - 405:	learn: 8048712.0189732	total: 4m 44s	remaining: 6m 56s
+[2023-05-26T02:38:09.185+0000] {logging_mixin.py:149} INFO - 406:	learn: 8048707.7440598	total: 4m 45s	remaining: 6m 56s
+[2023-05-26T02:38:09.830+0000] {logging_mixin.py:149} INFO - 407:	learn: 8048704.6356228	total: 4m 46s	remaining: 6m 55s
+[2023-05-26T02:38:10.517+0000] {logging_mixin.py:149} INFO - 408:	learn: 8048698.6286044	total: 4m 46s	remaining: 6m 54s
+[2023-05-26T02:38:11.146+0000] {logging_mixin.py:149} INFO - 409:	learn: 8048698.2159586	total: 4m 47s	remaining: 6m 53s
+[2023-05-26T02:38:11.764+0000] {logging_mixin.py:149} INFO - 410:	learn: 8048697.5409907	total: 4m 48s	remaining: 6m 52s
+[2023-05-26T02:38:12.473+0000] {logging_mixin.py:149} INFO - 411:	learn: 8048692.9497071	total: 4m 48s	remaining: 6m 52s
+[2023-05-26T02:38:13.148+0000] {logging_mixin.py:149} INFO - 412:	learn: 8048690.4383827	total: 4m 49s	remaining: 6m 51s
+[2023-05-26T02:38:13.824+0000] {logging_mixin.py:149} INFO - 413:	learn: 8048690.1830646	total: 4m 50s	remaining: 6m 50s
+[2023-05-26T02:38:14.580+0000] {logging_mixin.py:149} INFO - 414:	learn: 8048687.7944488	total: 4m 50s	remaining: 6m 50s
+[2023-05-26T02:38:15.239+0000] {logging_mixin.py:149} INFO - 415:	learn: 8048676.9491724	total: 4m 51s	remaining: 6m 49s
+[2023-05-26T02:38:15.996+0000] {logging_mixin.py:149} INFO - 416:	learn: 8048670.7343138	total: 4m 52s	remaining: 6m 48s
+[2023-05-26T02:38:16.566+0000] {logging_mixin.py:149} INFO - 417:	learn: 8048665.7544643	total: 4m 52s	remaining: 6m 47s
+[2023-05-26T02:38:17.236+0000] {logging_mixin.py:149} INFO - 418:	learn: 8048661.2232804	total: 4m 53s	remaining: 6m 47s
+[2023-05-26T02:38:17.876+0000] {logging_mixin.py:149} INFO - 419:	learn: 8048658.8936084	total: 4m 54s	remaining: 6m 46s
+[2023-05-26T02:38:18.623+0000] {logging_mixin.py:149} INFO - 420:	learn: 8048652.0572756	total: 4m 55s	remaining: 6m 45s
+[2023-05-26T02:38:19.326+0000] {logging_mixin.py:149} INFO - 421:	learn: 8048650.0877289	total: 4m 55s	remaining: 6m 45s
+[2023-05-26T02:38:20.075+0000] {logging_mixin.py:149} INFO - 422:	learn: 8048649.9866864	total: 4m 56s	remaining: 6m 44s
+[2023-05-26T02:38:20.755+0000] {logging_mixin.py:149} INFO - 423:	learn: 8048649.7284052	total: 4m 57s	remaining: 6m 43s
+[2023-05-26T02:38:21.383+0000] {logging_mixin.py:149} INFO - 424:	learn: 8048646.0886653	total: 4m 57s	remaining: 6m 42s
+[2023-05-26T02:38:21.983+0000] {logging_mixin.py:149} INFO - 425:	learn: 8048644.7864565	total: 4m 58s	remaining: 6m 42s
+[2023-05-26T02:38:22.657+0000] {logging_mixin.py:149} INFO - 426:	learn: 8048639.9640123	total: 4m 59s	remaining: 6m 41s
+[2023-05-26T02:38:23.274+0000] {logging_mixin.py:149} INFO - 427:	learn: 8048638.4598619	total: 4m 59s	remaining: 6m 40s
+[2023-05-26T02:38:23.959+0000] {logging_mixin.py:149} INFO - 428:	learn: 8048632.9750323	total: 5m	remaining: 6m 39s
+[2023-05-26T02:38:24.600+0000] {logging_mixin.py:149} INFO - 429:	learn: 8048632.7525810	total: 5m	remaining: 6m 38s
+[2023-05-26T02:38:25.297+0000] {logging_mixin.py:149} INFO - 430:	learn: 8048632.3206905	total: 5m 1s	remaining: 6m 38s
+[2023-05-26T02:38:26.001+0000] {logging_mixin.py:149} INFO - 431:	learn: 8048625.1097539	total: 5m 2s	remaining: 6m 37s
+[2023-05-26T02:38:26.779+0000] {logging_mixin.py:149} INFO - 432:	learn: 8048625.0453039	total: 5m 3s	remaining: 6m 36s
+[2023-05-26T02:38:27.440+0000] {logging_mixin.py:149} INFO - 433:	learn: 8048624.3810779	total: 5m 3s	remaining: 6m 36s
+[2023-05-26T02:38:28.044+0000] {logging_mixin.py:149} INFO - 434:	learn: 8048623.0337290	total: 5m 4s	remaining: 6m 35s
+[2023-05-26T02:38:28.692+0000] {logging_mixin.py:149} INFO - 435:	learn: 8048620.9735571	total: 5m 5s	remaining: 6m 34s
+[2023-05-26T02:38:29.474+0000] {logging_mixin.py:149} INFO - 436:	learn: 8048620.9120240	total: 5m 5s	remaining: 6m 34s
+[2023-05-26T02:38:30.192+0000] {logging_mixin.py:149} INFO - 437:	learn: 8048616.9090604	total: 5m 6s	remaining: 6m 33s
+[2023-05-26T02:38:30.894+0000] {logging_mixin.py:149} INFO - 438:	learn: 8048612.9003636	total: 5m 7s	remaining: 6m 32s
+[2023-05-26T02:38:31.641+0000] {logging_mixin.py:149} INFO - 439:	learn: 8048608.1619989	total: 5m 8s	remaining: 6m 32s
+[2023-05-26T02:38:32.323+0000] {logging_mixin.py:149} INFO - 440:	learn: 8048605.3139155	total: 5m 8s	remaining: 6m 31s
+[2023-05-26T02:38:33.009+0000] {logging_mixin.py:149} INFO - 441:	learn: 8048598.9973709	total: 5m 9s	remaining: 6m 30s
+[2023-05-26T02:38:33.605+0000] {logging_mixin.py:149} INFO - 442:	learn: 8048598.2444200	total: 5m 9s	remaining: 6m 29s
+[2023-05-26T02:38:34.249+0000] {logging_mixin.py:149} INFO - 443:	learn: 8048596.7570901	total: 5m 10s	remaining: 6m 28s
+[2023-05-26T02:38:34.967+0000] {logging_mixin.py:149} INFO - 444:	learn: 8048594.8577504	total: 5m 11s	remaining: 6m 28s
+[2023-05-26T02:38:35.676+0000] {logging_mixin.py:149} INFO - 445:	learn: 8048594.5878056	total: 5m 12s	remaining: 6m 27s
+[2023-05-26T02:38:36.432+0000] {logging_mixin.py:149} INFO - 446:	learn: 8048591.1511296	total: 5m 12s	remaining: 6m 27s
+[2023-05-26T02:38:37.190+0000] {logging_mixin.py:149} INFO - 447:	learn: 8048591.0852656	total: 5m 13s	remaining: 6m 26s
+[2023-05-26T02:38:37.955+0000] {logging_mixin.py:149} INFO - 448:	learn: 8048579.8988394	total: 5m 14s	remaining: 6m 25s
+[2023-05-26T02:38:38.659+0000] {logging_mixin.py:149} INFO - 449:	learn: 8048574.6811519	total: 5m 15s	remaining: 6m 25s
+[2023-05-26T02:38:39.453+0000] {logging_mixin.py:149} INFO - 450:	learn: 8048572.7636693	total: 5m 15s	remaining: 6m 24s
+[2023-05-26T02:38:40.203+0000] {logging_mixin.py:149} INFO - 451:	learn: 8048571.1443686	total: 5m 16s	remaining: 6m 23s
+[2023-05-26T02:38:40.923+0000] {logging_mixin.py:149} INFO - 452:	learn: 8048563.5027959	total: 5m 17s	remaining: 6m 23s
+[2023-05-26T02:38:41.591+0000] {logging_mixin.py:149} INFO - 453:	learn: 8048558.5488783	total: 5m 17s	remaining: 6m 22s
+[2023-05-26T02:38:42.259+0000] {logging_mixin.py:149} INFO - 454:	learn: 8048556.1418252	total: 5m 18s	remaining: 6m 21s
+[2023-05-26T02:38:43.033+0000] {logging_mixin.py:149} INFO - 455:	learn: 8048553.3973381	total: 5m 19s	remaining: 6m 21s
+[2023-05-26T02:38:43.738+0000] {logging_mixin.py:149} INFO - 456:	learn: 8048548.3723648	total: 5m 20s	remaining: 6m 20s
+[2023-05-26T02:38:44.497+0000] {logging_mixin.py:149} INFO - 457:	learn: 8048542.1501704	total: 5m 20s	remaining: 6m 19s
+[2023-05-26T02:38:45.289+0000] {logging_mixin.py:149} INFO - 458:	learn: 8048536.8700200	total: 5m 21s	remaining: 6m 19s
+[2023-05-26T02:38:46.056+0000] {logging_mixin.py:149} INFO - 459:	learn: 8048529.1645131	total: 5m 22s	remaining: 6m 18s
+[2023-05-26T02:38:46.775+0000] {logging_mixin.py:149} INFO - 460:	learn: 8048523.0538762	total: 5m 23s	remaining: 6m 17s
+[2023-05-26T02:38:47.514+0000] {logging_mixin.py:149} INFO - 461:	learn: 8048517.8439927	total: 5m 23s	remaining: 6m 17s
+[2023-05-26T02:38:48.153+0000] {logging_mixin.py:149} INFO - 462:	learn: 8048517.0230406	total: 5m 24s	remaining: 6m 16s
+[2023-05-26T02:38:48.896+0000] {logging_mixin.py:149} INFO - 463:	learn: 8048512.8013372	total: 5m 25s	remaining: 6m 15s
+[2023-05-26T02:38:49.571+0000] {logging_mixin.py:149} INFO - 464:	learn: 8048509.3195119	total: 5m 25s	remaining: 6m 15s
+[2023-05-26T02:38:50.299+0000] {logging_mixin.py:149} INFO - 465:	learn: 8048507.1832073	total: 5m 26s	remaining: 6m 14s
+[2023-05-26T02:38:50.924+0000] {logging_mixin.py:149} INFO - 466:	learn: 8048502.9414284	total: 5m 27s	remaining: 6m 13s
+[2023-05-26T02:38:51.588+0000] {logging_mixin.py:149} INFO - 467:	learn: 8048500.7765647	total: 5m 27s	remaining: 6m 12s
+[2023-05-26T02:38:52.290+0000] {logging_mixin.py:149} INFO - 468:	learn: 8048496.8171469	total: 5m 28s	remaining: 6m 12s
+[2023-05-26T02:38:52.919+0000] {logging_mixin.py:149} INFO - 469:	learn: 8048494.9380614	total: 5m 29s	remaining: 6m 11s
+[2023-05-26T02:38:53.755+0000] {logging_mixin.py:149} INFO - 470:	learn: 8048494.8867282	total: 5m 30s	remaining: 6m 10s
+[2023-05-26T02:38:54.440+0000] {logging_mixin.py:149} INFO - 471:	learn: 8048492.3137308	total: 5m 30s	remaining: 6m 10s
+[2023-05-26T02:38:55.141+0000] {logging_mixin.py:149} INFO - 472:	learn: 8048488.4555288	total: 5m 31s	remaining: 6m 9s
+[2023-05-26T02:38:55.869+0000] {logging_mixin.py:149} INFO - 473:	learn: 8048488.3676184	total: 5m 32s	remaining: 6m 8s
+[2023-05-26T02:38:56.620+0000] {logging_mixin.py:149} INFO - 474:	learn: 8048484.9133907	total: 5m 32s	remaining: 6m 8s
+[2023-05-26T02:38:57.306+0000] {logging_mixin.py:149} INFO - 475:	learn: 8048484.4738874	total: 5m 33s	remaining: 6m 7s
+[2023-05-26T02:38:57.936+0000] {logging_mixin.py:149} INFO - 476:	learn: 8048483.4855492	total: 5m 34s	remaining: 6m 6s
+[2023-05-26T02:38:58.569+0000] {logging_mixin.py:149} INFO - 477:	learn: 8048482.7967178	total: 5m 34s	remaining: 6m 5s
+[2023-05-26T02:38:59.144+0000] {logging_mixin.py:149} INFO - 478:	learn: 8048482.4360500	total: 5m 35s	remaining: 6m 4s
+[2023-05-26T02:38:59.761+0000] {logging_mixin.py:149} INFO - 479:	learn: 8048482.1814797	total: 5m 36s	remaining: 6m 4s
+[2023-05-26T02:39:00.439+0000] {logging_mixin.py:149} INFO - 480:	learn: 8048479.1673163	total: 5m 36s	remaining: 6m 3s
+[2023-05-26T02:39:01.165+0000] {logging_mixin.py:149} INFO - 481:	learn: 8048477.5402683	total: 5m 37s	remaining: 6m 2s
+[2023-05-26T02:39:01.782+0000] {logging_mixin.py:149} INFO - 482:	learn: 8048476.5950508	total: 5m 38s	remaining: 6m 1s
+[2023-05-26T02:39:02.410+0000] {logging_mixin.py:149} INFO - 483:	learn: 8048475.8760672	total: 5m 38s	remaining: 6m 1s
+[2023-05-26T02:39:03.112+0000] {logging_mixin.py:149} INFO - 484:	learn: 8048475.6480375	total: 5m 39s	remaining: 6m
+[2023-05-26T02:39:03.878+0000] {logging_mixin.py:149} INFO - 485:	learn: 8048472.6542004	total: 5m 40s	remaining: 5m 59s
+[2023-05-26T02:39:04.565+0000] {logging_mixin.py:149} INFO - 486:	learn: 8048469.7800977	total: 5m 40s	remaining: 5m 59s
+[2023-05-26T02:39:05.344+0000] {logging_mixin.py:149} INFO - 487:	learn: 8048469.7226244	total: 5m 41s	remaining: 5m 58s
+[2023-05-26T02:39:06.089+0000] {logging_mixin.py:149} INFO - 488:	learn: 8048466.0554832	total: 5m 42s	remaining: 5m 57s
+[2023-05-26T02:39:06.784+0000] {logging_mixin.py:149} INFO - 489:	learn: 8048464.9336457	total: 5m 43s	remaining: 5m 57s
+[2023-05-26T02:39:07.546+0000] {logging_mixin.py:149} INFO - 490:	learn: 8048462.6456964	total: 5m 43s	remaining: 5m 56s
+[2023-05-26T02:39:08.212+0000] {logging_mixin.py:149} INFO - 491:	learn: 8048462.5311769	total: 5m 44s	remaining: 5m 55s
+[2023-05-26T02:39:08.855+0000] {logging_mixin.py:149} INFO - 492:	learn: 8048462.2285620	total: 5m 45s	remaining: 5m 55s
+[2023-05-26T02:39:09.573+0000] {logging_mixin.py:149} INFO - 493:	learn: 8048462.1297227	total: 5m 45s	remaining: 5m 54s
+[2023-05-26T02:39:10.242+0000] {logging_mixin.py:149} INFO - 494:	learn: 8048462.0895899	total: 5m 46s	remaining: 5m 53s
+[2023-05-26T02:39:11.015+0000] {logging_mixin.py:149} INFO - 495:	learn: 8048460.3739053	total: 5m 47s	remaining: 5m 52s
+[2023-05-26T02:39:11.822+0000] {logging_mixin.py:149} INFO - 496:	learn: 8048459.9556358	total: 5m 48s	remaining: 5m 52s
+[2023-05-26T02:39:12.536+0000] {logging_mixin.py:149} INFO - 497:	learn: 8048455.5584674	total: 5m 48s	remaining: 5m 51s
+[2023-05-26T02:39:13.276+0000] {logging_mixin.py:149} INFO - 498:	learn: 8048448.8817643	total: 5m 49s	remaining: 5m 51s
+[2023-05-26T02:39:14.026+0000] {logging_mixin.py:149} INFO - 499:	learn: 8048448.2607510	total: 5m 50s	remaining: 5m 50s
+[2023-05-26T02:39:14.754+0000] {logging_mixin.py:149} INFO - 500:	learn: 8048441.4681360	total: 5m 51s	remaining: 5m 49s
+[2023-05-26T02:39:15.391+0000] {logging_mixin.py:149} INFO - 501:	learn: 8048440.0649698	total: 5m 51s	remaining: 5m 48s
+[2023-05-26T02:39:16.135+0000] {logging_mixin.py:149} INFO - 502:	learn: 8048433.1609994	total: 5m 52s	remaining: 5m 48s
+[2023-05-26T02:39:16.815+0000] {logging_mixin.py:149} INFO - 503:	learn: 8048432.8755642	total: 5m 53s	remaining: 5m 47s
+[2023-05-26T02:39:17.567+0000] {logging_mixin.py:149} INFO - 504:	learn: 8048432.3817756	total: 5m 53s	remaining: 5m 46s
+[2023-05-26T02:39:18.320+0000] {logging_mixin.py:149} INFO - 505:	learn: 8048427.6593942	total: 5m 54s	remaining: 5m 46s
+[2023-05-26T02:39:18.994+0000] {logging_mixin.py:149} INFO - 506:	learn: 8048426.1193058	total: 5m 55s	remaining: 5m 45s
+[2023-05-26T02:39:19.709+0000] {logging_mixin.py:149} INFO - 507:	learn: 8048423.0433072	total: 5m 56s	remaining: 5m 44s
+[2023-05-26T02:39:20.361+0000] {logging_mixin.py:149} INFO - 508:	learn: 8048418.8738212	total: 5m 56s	remaining: 5m 44s
+[2023-05-26T02:39:21.092+0000] {logging_mixin.py:149} INFO - 509:	learn: 8048415.1671081	total: 5m 57s	remaining: 5m 43s
+[2023-05-26T02:39:21.765+0000] {logging_mixin.py:149} INFO - 510:	learn: 8048413.7222410	total: 5m 58s	remaining: 5m 42s
+[2023-05-26T02:39:22.479+0000] {logging_mixin.py:149} INFO - 511:	learn: 8048409.7301564	total: 5m 58s	remaining: 5m 42s
+[2023-05-26T02:39:23.119+0000] {logging_mixin.py:149} INFO - 512:	learn: 8048409.6803100	total: 5m 59s	remaining: 5m 41s
+[2023-05-26T02:39:23.752+0000] {logging_mixin.py:149} INFO - 513:	learn: 8048408.5272989	total: 6m	remaining: 5m 40s
+[2023-05-26T02:39:24.413+0000] {logging_mixin.py:149} INFO - 514:	learn: 8048408.4357721	total: 6m	remaining: 5m 39s
+[2023-05-26T02:39:25.173+0000] {logging_mixin.py:149} INFO - 515:	learn: 8048408.0826385	total: 6m 1s	remaining: 5m 39s
+[2023-05-26T02:39:25.901+0000] {logging_mixin.py:149} INFO - 516:	learn: 8048405.2811981	total: 6m 2s	remaining: 5m 38s
+[2023-05-26T02:39:26.534+0000] {logging_mixin.py:149} INFO - 517:	learn: 8048401.5690030	total: 6m 2s	remaining: 5m 37s
+[2023-05-26T02:39:27.172+0000] {logging_mixin.py:149} INFO - 518:	learn: 8048399.4331665	total: 6m 3s	remaining: 5m 36s
+[2023-05-26T02:39:27.839+0000] {logging_mixin.py:149} INFO - 519:	learn: 8048396.4968962	total: 6m 4s	remaining: 5m 36s
+[2023-05-26T02:39:28.537+0000] {logging_mixin.py:149} INFO - 520:	learn: 8048394.0497301	total: 6m 4s	remaining: 5m 35s
+[2023-05-26T02:39:29.286+0000] {logging_mixin.py:149} INFO - 521:	learn: 8048394.0231488	total: 6m 5s	remaining: 5m 34s
+[2023-05-26T02:39:29.886+0000] {logging_mixin.py:149} INFO - 522:	learn: 8048393.7958256	total: 6m 6s	remaining: 5m 34s
+[2023-05-26T02:39:30.533+0000] {logging_mixin.py:149} INFO - 523:	learn: 8048392.3184675	total: 6m 6s	remaining: 5m 33s
+[2023-05-26T02:39:31.276+0000] {logging_mixin.py:149} INFO - 524:	learn: 8048390.7675995	total: 6m 7s	remaining: 5m 32s
+[2023-05-26T02:39:31.997+0000] {logging_mixin.py:149} INFO - 525:	learn: 8048388.1317163	total: 6m 8s	remaining: 5m 31s
+[2023-05-26T02:39:32.766+0000] {logging_mixin.py:149} INFO - 526:	learn: 8048388.1129841	total: 6m 9s	remaining: 5m 31s
+[2023-05-26T02:39:33.431+0000] {logging_mixin.py:149} INFO - 527:	learn: 8048384.9263430	total: 6m 9s	remaining: 5m 30s
+[2023-05-26T02:39:34.061+0000] {logging_mixin.py:149} INFO - 528:	learn: 8048383.8777901	total: 6m 10s	remaining: 5m 29s
+[2023-05-26T02:39:34.679+0000] {logging_mixin.py:149} INFO - 529:	learn: 8048381.3438688	total: 6m 11s	remaining: 5m 29s
+[2023-05-26T02:39:35.284+0000] {logging_mixin.py:149} INFO - 530:	learn: 8048378.9475074	total: 6m 11s	remaining: 5m 28s
+[2023-05-26T02:39:36.010+0000] {logging_mixin.py:149} INFO - 531:	learn: 8048376.3841910	total: 6m 12s	remaining: 5m 27s
+[2023-05-26T02:39:36.605+0000] {logging_mixin.py:149} INFO - 532:	learn: 8048376.1127546	total: 6m 12s	remaining: 5m 26s
+[2023-05-26T02:39:37.306+0000] {logging_mixin.py:149} INFO - 533:	learn: 8048374.3211356	total: 6m 13s	remaining: 5m 26s
+[2023-05-26T02:39:38.017+0000] {logging_mixin.py:149} INFO - 534:	learn: 8048369.0246580	total: 6m 14s	remaining: 5m 25s
+[2023-05-26T02:39:38.745+0000] {logging_mixin.py:149} INFO - 535:	learn: 8048365.9119488	total: 6m 15s	remaining: 5m 24s
+[2023-05-26T02:39:39.459+0000] {logging_mixin.py:149} INFO - 536:	learn: 8048363.0384361	total: 6m 15s	remaining: 5m 24s
+[2023-05-26T02:39:40.092+0000] {logging_mixin.py:149} INFO - 537:	learn: 8048362.4932386	total: 6m 16s	remaining: 5m 23s
+[2023-05-26T02:39:40.717+0000] {logging_mixin.py:149} INFO - 538:	learn: 8048359.4700561	total: 6m 17s	remaining: 5m 22s
+[2023-05-26T02:39:41.349+0000] {logging_mixin.py:149} INFO - 539:	learn: 8048354.5618185	total: 6m 17s	remaining: 5m 21s
+[2023-05-26T02:39:42.021+0000] {logging_mixin.py:149} INFO - 540:	learn: 8048352.5780777	total: 6m 18s	remaining: 5m 21s
+[2023-05-26T02:39:42.655+0000] {logging_mixin.py:149} INFO - 541:	learn: 8048350.6199851	total: 6m 19s	remaining: 5m 20s
+[2023-05-26T02:39:43.293+0000] {logging_mixin.py:149} INFO - 542:	learn: 8048347.4805780	total: 6m 19s	remaining: 5m 19s
+[2023-05-26T02:39:44.079+0000] {logging_mixin.py:149} INFO - 543:	learn: 8048347.4504523	total: 6m 20s	remaining: 5m 18s
+[2023-05-26T02:39:44.696+0000] {logging_mixin.py:149} INFO - 544:	learn: 8048345.8925141	total: 6m 21s	remaining: 5m 18s
+[2023-05-26T02:39:45.290+0000] {logging_mixin.py:149} INFO - 545:	learn: 8048343.3153810	total: 6m 21s	remaining: 5m 17s
+[2023-05-26T02:39:45.902+0000] {logging_mixin.py:149} INFO - 546:	learn: 8048342.6494735	total: 6m 22s	remaining: 5m 16s
+[2023-05-26T02:39:46.602+0000] {logging_mixin.py:149} INFO - 547:	learn: 8048340.3785383	total: 6m 22s	remaining: 5m 15s
+[2023-05-26T02:39:47.305+0000] {logging_mixin.py:149} INFO - 548:	learn: 8048336.4630111	total: 6m 23s	remaining: 5m 15s
+[2023-05-26T02:39:47.918+0000] {logging_mixin.py:149} INFO - 549:	learn: 8048335.3377108	total: 6m 24s	remaining: 5m 14s
+[2023-05-26T02:39:48.627+0000] {logging_mixin.py:149} INFO - 550:	learn: 8048333.0628935	total: 6m 24s	remaining: 5m 13s
+[2023-05-26T02:39:49.264+0000] {logging_mixin.py:149} INFO - 551:	learn: 8048330.1440805	total: 6m 25s	remaining: 5m 12s
+[2023-05-26T02:39:49.997+0000] {logging_mixin.py:149} INFO - 552:	learn: 8048328.1710923	total: 6m 26s	remaining: 5m 12s
+[2023-05-26T02:39:50.730+0000] {logging_mixin.py:149} INFO - 553:	learn: 8048322.1302133	total: 6m 27s	remaining: 5m 11s
+[2023-05-26T02:39:51.323+0000] {logging_mixin.py:149} INFO - 554:	learn: 8048320.5615412	total: 6m 27s	remaining: 5m 10s
+[2023-05-26T02:39:51.972+0000] {logging_mixin.py:149} INFO - 555:	learn: 8048319.5301045	total: 6m 28s	remaining: 5m 10s
+[2023-05-26T02:39:52.666+0000] {logging_mixin.py:149} INFO - 556:	learn: 8048317.2189204	total: 6m 29s	remaining: 5m 9s
+[2023-05-26T02:39:53.408+0000] {logging_mixin.py:149} INFO - 557:	learn: 8048317.2048746	total: 6m 29s	remaining: 5m 8s
+[2023-05-26T02:39:54.082+0000] {logging_mixin.py:149} INFO - 558:	learn: 8048311.6233990	total: 6m 30s	remaining: 5m 8s
+[2023-05-26T02:39:54.708+0000] {logging_mixin.py:149} INFO - 559:	learn: 8048308.6352842	total: 6m 31s	remaining: 5m 7s
+[2023-05-26T02:39:55.373+0000] {logging_mixin.py:149} INFO - 560:	learn: 8048306.4150050	total: 6m 31s	remaining: 5m 6s
+[2023-05-26T02:39:56.082+0000] {logging_mixin.py:149} INFO - 561:	learn: 8048305.1253311	total: 6m 32s	remaining: 5m 5s
+[2023-05-26T02:39:56.777+0000] {logging_mixin.py:149} INFO - 562:	learn: 8048304.3631681	total: 6m 33s	remaining: 5m 5s
+[2023-05-26T02:39:57.508+0000] {logging_mixin.py:149} INFO - 563:	learn: 8048304.2856021	total: 6m 33s	remaining: 5m 4s
+[2023-05-26T02:39:58.245+0000] {logging_mixin.py:149} INFO - 564:	learn: 8048303.7155893	total: 6m 34s	remaining: 5m 3s
+[2023-05-26T02:39:58.932+0000] {logging_mixin.py:149} INFO - 565:	learn: 8048302.9569638	total: 6m 35s	remaining: 5m 3s
+[2023-05-26T02:39:59.619+0000] {logging_mixin.py:149} INFO - 566:	learn: 8048299.9741482	total: 6m 35s	remaining: 5m 2s
+[2023-05-26T02:40:00.210+0000] {logging_mixin.py:149} INFO - 567:	learn: 8048299.8236802	total: 6m 36s	remaining: 5m 1s
+[2023-05-26T02:40:00.843+0000] {logging_mixin.py:149} INFO - 568:	learn: 8048295.9737680	total: 6m 37s	remaining: 5m
+[2023-05-26T02:40:01.495+0000] {logging_mixin.py:149} INFO - 569:	learn: 8048295.8903021	total: 6m 37s	remaining: 5m
+[2023-05-26T02:40:02.222+0000] {logging_mixin.py:149} INFO - 570:	learn: 8048291.5144635	total: 6m 38s	remaining: 4m 59s
+[2023-05-26T02:40:02.848+0000] {logging_mixin.py:149} INFO - 571:	learn: 8048289.4097791	total: 6m 39s	remaining: 4m 58s
+[2023-05-26T02:40:03.509+0000] {logging_mixin.py:149} INFO - 572:	learn: 8048287.5513610	total: 6m 39s	remaining: 4m 57s
+[2023-05-26T02:40:04.283+0000] {logging_mixin.py:149} INFO - 573:	learn: 8048287.5396271	total: 6m 40s	remaining: 4m 57s
+[2023-05-26T02:40:04.925+0000] {logging_mixin.py:149} INFO - 574:	learn: 8048286.6939108	total: 6m 41s	remaining: 4m 56s
+[2023-05-26T02:40:05.651+0000] {logging_mixin.py:149} INFO - 575:	learn: 8048286.6602147	total: 6m 42s	remaining: 4m 55s
+[2023-05-26T02:40:06.339+0000] {logging_mixin.py:149} INFO - 576:	learn: 8048284.8147212	total: 6m 42s	remaining: 4m 55s
+[2023-05-26T02:40:07.004+0000] {logging_mixin.py:149} INFO - 577:	learn: 8048284.1152309	total: 6m 43s	remaining: 4m 54s
+[2023-05-26T02:40:07.679+0000] {logging_mixin.py:149} INFO - 578:	learn: 8048279.9165792	total: 6m 44s	remaining: 4m 53s
+[2023-05-26T02:40:08.289+0000] {logging_mixin.py:149} INFO - 579:	learn: 8048279.4806320	total: 6m 44s	remaining: 4m 53s
+[2023-05-26T02:40:08.963+0000] {logging_mixin.py:149} INFO - 580:	learn: 8048278.9449309	total: 6m 45s	remaining: 4m 52s
+[2023-05-26T02:40:09.691+0000] {logging_mixin.py:149} INFO - 581:	learn: 8048276.0819428	total: 6m 46s	remaining: 4m 51s
+[2023-05-26T02:40:10.394+0000] {logging_mixin.py:149} INFO - 582:	learn: 8048273.5343963	total: 6m 46s	remaining: 4m 50s
+[2023-05-26T02:40:11.196+0000] {logging_mixin.py:149} INFO - 583:	learn: 8048272.9276876	total: 6m 47s	remaining: 4m 50s
+[2023-05-26T02:40:11.826+0000] {logging_mixin.py:149} INFO - 584:	learn: 8048271.6757208	total: 6m 48s	remaining: 4m 49s
+[2023-05-26T02:40:12.482+0000] {logging_mixin.py:149} INFO - 585:	learn: 8048270.8367970	total: 6m 48s	remaining: 4m 48s
+[2023-05-26T02:40:13.205+0000] {logging_mixin.py:149} INFO - 586:	learn: 8048269.6894315	total: 6m 49s	remaining: 4m 48s
+[2023-05-26T02:40:13.899+0000] {logging_mixin.py:149} INFO - 587:	learn: 8048265.3167187	total: 6m 50s	remaining: 4m 47s
+[2023-05-26T02:40:14.527+0000] {logging_mixin.py:149} INFO - 588:	learn: 8048263.4100788	total: 6m 50s	remaining: 4m 46s
+[2023-05-26T02:40:15.161+0000] {logging_mixin.py:149} INFO - 589:	learn: 8048261.0997078	total: 6m 51s	remaining: 4m 45s
+[2023-05-26T02:40:15.835+0000] {logging_mixin.py:149} INFO - 590:	learn: 8048259.2747806	total: 6m 52s	remaining: 4m 45s
+[2023-05-26T02:40:16.544+0000] {logging_mixin.py:149} INFO - 591:	learn: 8048255.0075251	total: 6m 52s	remaining: 4m 44s
+[2023-05-26T02:40:17.217+0000] {logging_mixin.py:149} INFO - 592:	learn: 8048252.2130649	total: 6m 53s	remaining: 4m 43s
+[2023-05-26T02:40:17.895+0000] {logging_mixin.py:149} INFO - 593:	learn: 8048249.8112024	total: 6m 54s	remaining: 4m 43s
+[2023-05-26T02:40:18.570+0000] {logging_mixin.py:149} INFO - 594:	learn: 8048247.1500975	total: 6m 54s	remaining: 4m 42s
+[2023-05-26T02:40:19.250+0000] {logging_mixin.py:149} INFO - 595:	learn: 8048244.1986655	total: 6m 55s	remaining: 4m 41s
+[2023-05-26T02:40:19.874+0000] {logging_mixin.py:149} INFO - 596:	learn: 8048243.9162043	total: 6m 56s	remaining: 4m 40s
+[2023-05-26T02:40:20.528+0000] {logging_mixin.py:149} INFO - 597:	learn: 8048242.4026808	total: 6m 56s	remaining: 4m 40s
+[2023-05-26T02:40:21.185+0000] {logging_mixin.py:149} INFO - 598:	learn: 8048239.7009637	total: 6m 57s	remaining: 4m 39s
+[2023-05-26T02:40:21.830+0000] {logging_mixin.py:149} INFO - 599:	learn: 8048239.0779355	total: 6m 58s	remaining: 4m 38s
+[2023-05-26T02:40:22.509+0000] {logging_mixin.py:149} INFO - 600:	learn: 8048237.6388536	total: 6m 58s	remaining: 4m 38s
+[2023-05-26T02:40:23.199+0000] {logging_mixin.py:149} INFO - 601:	learn: 8048236.1749549	total: 6m 59s	remaining: 4m 37s
+[2023-05-26T02:40:23.983+0000] {logging_mixin.py:149} INFO - 602:	learn: 8048234.0236774	total: 7m	remaining: 4m 36s
+[2023-05-26T02:40:24.637+0000] {logging_mixin.py:149} INFO - 603:	learn: 8048233.5264061	total: 7m	remaining: 4m 36s
+[2023-05-26T02:40:25.342+0000] {logging_mixin.py:149} INFO - 604:	learn: 8048231.8360129	total: 7m 1s	remaining: 4m 35s
+[2023-05-26T02:40:26.053+0000] {logging_mixin.py:149} INFO - 605:	learn: 8048231.6502029	total: 7m 2s	remaining: 4m 34s
+[2023-05-26T02:40:26.638+0000] {logging_mixin.py:149} INFO - 606:	learn: 8048230.8582601	total: 7m 2s	remaining: 4m 33s
+[2023-05-26T02:40:27.280+0000] {logging_mixin.py:149} INFO - 607:	learn: 8048230.3458213	total: 7m 3s	remaining: 4m 33s
+[2023-05-26T02:40:27.958+0000] {logging_mixin.py:149} INFO - 608:	learn: 8048229.0835198	total: 7m 4s	remaining: 4m 32s
+[2023-05-26T02:40:28.718+0000] {logging_mixin.py:149} INFO - 609:	learn: 8048226.4524262	total: 7m 5s	remaining: 4m 31s
+[2023-05-26T02:40:29.307+0000] {logging_mixin.py:149} INFO - 610:	learn: 8048225.5161693	total: 7m 5s	remaining: 4m 30s
+[2023-05-26T02:40:30.003+0000] {logging_mixin.py:149} INFO - 611:	learn: 8048224.4721770	total: 7m 6s	remaining: 4m 30s
+[2023-05-26T02:40:30.653+0000] {logging_mixin.py:149} INFO - 612:	learn: 8048222.6573030	total: 7m 6s	remaining: 4m 29s
+[2023-05-26T02:40:31.259+0000] {logging_mixin.py:149} INFO - 613:	learn: 8048222.2286686	total: 7m 7s	remaining: 4m 28s
+[2023-05-26T02:40:31.945+0000] {logging_mixin.py:149} INFO - 614:	learn: 8048221.9412596	total: 7m 8s	remaining: 4m 28s
+[2023-05-26T02:40:32.627+0000] {logging_mixin.py:149} INFO - 615:	learn: 8048221.5236493	total: 7m 8s	remaining: 4m 27s
+[2023-05-26T02:40:33.445+0000] {logging_mixin.py:149} INFO - 616:	learn: 8048221.4849025	total: 7m 9s	remaining: 4m 26s
+[2023-05-26T02:40:34.197+0000] {logging_mixin.py:149} INFO - 617:	learn: 8048219.5658253	total: 7m 10s	remaining: 4m 26s
+[2023-05-26T02:40:34.850+0000] {logging_mixin.py:149} INFO - 618:	learn: 8048218.4958679	total: 7m 11s	remaining: 4m 25s
+[2023-05-26T02:40:35.651+0000] {logging_mixin.py:149} INFO - 619:	learn: 8048217.2411051	total: 7m 11s	remaining: 4m 24s
+[2023-05-26T02:40:36.377+0000] {logging_mixin.py:149} INFO - 620:	learn: 8048215.7290495	total: 7m 12s	remaining: 4m 24s
+[2023-05-26T02:40:37.099+0000] {logging_mixin.py:149} INFO - 621:	learn: 8048213.1715398	total: 7m 13s	remaining: 4m 23s
+[2023-05-26T02:40:37.858+0000] {logging_mixin.py:149} INFO - 622:	learn: 8048211.9462853	total: 7m 14s	remaining: 4m 22s
+[2023-05-26T02:40:38.687+0000] {logging_mixin.py:149} INFO - 623:	learn: 8048210.4602685	total: 7m 15s	remaining: 4m 22s
+[2023-05-26T02:40:39.389+0000] {logging_mixin.py:149} INFO - 624:	learn: 8048209.6821696	total: 7m 15s	remaining: 4m 21s
+[2023-05-26T02:40:40.209+0000] {logging_mixin.py:149} INFO - 625:	learn: 8048209.4959901	total: 7m 16s	remaining: 4m 20s
+[2023-05-26T02:40:41.121+0000] {logging_mixin.py:149} INFO - 626:	learn: 8048209.4830557	total: 7m 17s	remaining: 4m 20s
+[2023-05-26T02:40:41.870+0000] {logging_mixin.py:149} INFO - 627:	learn: 8048208.2482252	total: 7m 18s	remaining: 4m 19s
+[2023-05-26T02:40:42.608+0000] {logging_mixin.py:149} INFO - 628:	learn: 8048207.5290691	total: 7m 18s	remaining: 4m 18s
+[2023-05-26T02:40:43.352+0000] {logging_mixin.py:149} INFO - 629:	learn: 8048204.7529950	total: 7m 19s	remaining: 4m 18s
+[2023-05-26T02:40:44.173+0000] {logging_mixin.py:149} INFO - 630:	learn: 8048204.0577583	total: 7m 20s	remaining: 4m 17s
+[2023-05-26T02:40:45.003+0000] {logging_mixin.py:149} INFO - 631:	learn: 8048203.0213526	total: 7m 21s	remaining: 4m 16s
+[2023-05-26T02:40:45.717+0000] {logging_mixin.py:149} INFO - 632:	learn: 8048201.8221742	total: 7m 22s	remaining: 4m 16s
+[2023-05-26T02:40:46.398+0000] {logging_mixin.py:149} INFO - 633:	learn: 8048200.8160448	total: 7m 22s	remaining: 4m 15s
+[2023-05-26T02:40:47.112+0000] {logging_mixin.py:149} INFO - 634:	learn: 8048198.2594190	total: 7m 23s	remaining: 4m 14s
+[2023-05-26T02:40:47.893+0000] {logging_mixin.py:149} INFO - 635:	learn: 8048196.3151342	total: 7m 24s	remaining: 4m 14s
+[2023-05-26T02:40:48.532+0000] {logging_mixin.py:149} INFO - 636:	learn: 8048195.1150049	total: 7m 24s	remaining: 4m 13s
+[2023-05-26T02:40:49.325+0000] {logging_mixin.py:149} INFO - 637:	learn: 8048193.4487575	total: 7m 25s	remaining: 4m 12s
+[2023-05-26T02:40:50.092+0000] {logging_mixin.py:149} INFO - 638:	learn: 8048193.2586456	total: 7m 26s	remaining: 4m 12s
+[2023-05-26T02:40:50.806+0000] {logging_mixin.py:149} INFO - 639:	learn: 8048191.4616377	total: 7m 27s	remaining: 4m 11s
+[2023-05-26T02:40:51.447+0000] {logging_mixin.py:149} INFO - 640:	learn: 8048191.2473793	total: 7m 27s	remaining: 4m 10s
+[2023-05-26T02:40:52.119+0000] {logging_mixin.py:149} INFO - 641:	learn: 8048190.5962524	total: 7m 28s	remaining: 4m 10s
+[2023-05-26T02:40:52.814+0000] {logging_mixin.py:149} INFO - 642:	learn: 8048189.4013067	total: 7m 29s	remaining: 4m 9s
+[2023-05-26T02:40:53.526+0000] {logging_mixin.py:149} INFO - 643:	learn: 8048189.1728378	total: 7m 29s	remaining: 4m 8s
+[2023-05-26T02:40:54.236+0000] {logging_mixin.py:149} INFO - 644:	learn: 8048189.0103324	total: 7m 30s	remaining: 4m 7s
+[2023-05-26T02:40:54.935+0000] {logging_mixin.py:149} INFO - 645:	learn: 8048188.1277510	total: 7m 31s	remaining: 4m 7s
+[2023-05-26T02:40:55.677+0000] {logging_mixin.py:149} INFO - 646:	learn: 8048185.7695710	total: 7m 32s	remaining: 4m 6s
+[2023-05-26T02:40:56.353+0000] {logging_mixin.py:149} INFO - 647:	learn: 8048185.5048501	total: 7m 32s	remaining: 4m 5s
+[2023-05-26T02:40:57.147+0000] {logging_mixin.py:149} INFO - 648:	learn: 8048183.7224289	total: 7m 33s	remaining: 4m 5s
+[2023-05-26T02:40:57.878+0000] {logging_mixin.py:149} INFO - 649:	learn: 8048183.6662873	total: 7m 34s	remaining: 4m 4s
+[2023-05-26T02:40:58.594+0000] {logging_mixin.py:149} INFO - 650:	learn: 8048182.7168023	total: 7m 34s	remaining: 4m 3s
+[2023-05-26T02:40:59.273+0000] {logging_mixin.py:149} INFO - 651:	learn: 8048181.8267050	total: 7m 35s	remaining: 4m 3s
+[2023-05-26T02:40:59.939+0000] {logging_mixin.py:149} INFO - 652:	learn: 8048180.7931515	total: 7m 36s	remaining: 4m 2s
+[2023-05-26T02:41:00.559+0000] {logging_mixin.py:149} INFO - 653:	learn: 8048180.4485586	total: 7m 36s	remaining: 4m 1s
+[2023-05-26T02:41:01.161+0000] {logging_mixin.py:149} INFO - 654:	learn: 8048180.0778661	total: 7m 37s	remaining: 4m
+[2023-05-26T02:41:01.820+0000] {logging_mixin.py:149} INFO - 655:	learn: 8048179.9560292	total: 7m 38s	remaining: 4m
+[2023-05-26T02:41:02.546+0000] {logging_mixin.py:149} INFO - 656:	learn: 8048179.4593325	total: 7m 38s	remaining: 3m 59s
+[2023-05-26T02:41:03.219+0000] {logging_mixin.py:149} INFO - 657:	learn: 8048179.1322690	total: 7m 39s	remaining: 3m 58s
+[2023-05-26T02:41:03.884+0000] {logging_mixin.py:149} INFO - 658:	learn: 8048179.0869002	total: 7m 40s	remaining: 3m 58s
+[2023-05-26T02:41:04.562+0000] {logging_mixin.py:149} INFO - 659:	learn: 8048178.9428321	total: 7m 40s	remaining: 3m 57s
+[2023-05-26T02:41:05.277+0000] {logging_mixin.py:149} INFO - 660:	learn: 8048175.4481505	total: 7m 41s	remaining: 3m 56s
+[2023-05-26T02:41:06.035+0000] {logging_mixin.py:149} INFO - 661:	learn: 8048173.7306210	total: 7m 42s	remaining: 3m 56s
+[2023-05-26T02:41:06.766+0000] {logging_mixin.py:149} INFO - 662:	learn: 8048172.6979784	total: 7m 43s	remaining: 3m 55s
+[2023-05-26T02:41:07.461+0000] {logging_mixin.py:149} INFO - 663:	learn: 8048172.6359500	total: 7m 43s	remaining: 3m 54s
+[2023-05-26T02:41:08.191+0000] {logging_mixin.py:149} INFO - 664:	learn: 8048171.6269766	total: 7m 44s	remaining: 3m 54s
+[2023-05-26T02:41:08.819+0000] {logging_mixin.py:149} INFO - 665:	learn: 8048170.3737522	total: 7m 45s	remaining: 3m 53s
+[2023-05-26T02:41:09.512+0000] {logging_mixin.py:149} INFO - 666:	learn: 8048169.8864903	total: 7m 45s	remaining: 3m 52s
+[2023-05-26T02:41:10.179+0000] {logging_mixin.py:149} INFO - 667:	learn: 8048168.4356058	total: 7m 46s	remaining: 3m 51s
+[2023-05-26T02:41:10.900+0000] {logging_mixin.py:149} INFO - 668:	learn: 8048168.3097435	total: 7m 47s	remaining: 3m 51s
+[2023-05-26T02:41:11.612+0000] {logging_mixin.py:149} INFO - 669:	learn: 8048167.1194965	total: 7m 47s	remaining: 3m 50s
+[2023-05-26T02:41:12.359+0000] {logging_mixin.py:149} INFO - 670:	learn: 8048165.2417892	total: 7m 48s	remaining: 3m 49s
+[2023-05-26T02:41:13.019+0000] {logging_mixin.py:149} INFO - 671:	learn: 8048165.0568026	total: 7m 49s	remaining: 3m 49s
+[2023-05-26T02:41:13.727+0000] {logging_mixin.py:149} INFO - 672:	learn: 8048162.9812329	total: 7m 50s	remaining: 3m 48s
+[2023-05-26T02:41:14.445+0000] {logging_mixin.py:149} INFO - 673:	learn: 8048162.8698992	total: 7m 50s	remaining: 3m 47s
+[2023-05-26T02:41:15.207+0000] {logging_mixin.py:149} INFO - 674:	learn: 8048162.5723029	total: 7m 51s	remaining: 3m 47s
+[2023-05-26T02:41:15.928+0000] {logging_mixin.py:149} INFO - 675:	learn: 8048162.4417612	total: 7m 52s	remaining: 3m 46s
+[2023-05-26T02:41:16.642+0000] {logging_mixin.py:149} INFO - 676:	learn: 8048159.3653450	total: 7m 52s	remaining: 3m 45s
+[2023-05-26T02:41:17.360+0000] {logging_mixin.py:149} INFO - 677:	learn: 8048157.5750454	total: 7m 53s	remaining: 3m 44s
+[2023-05-26T02:41:18.131+0000] {logging_mixin.py:149} INFO - 678:	learn: 8048155.0883387	total: 7m 54s	remaining: 3m 44s
+[2023-05-26T02:41:18.875+0000] {logging_mixin.py:149} INFO - 679:	learn: 8048154.8078841	total: 7m 55s	remaining: 3m 43s
+[2023-05-26T02:41:19.617+0000] {logging_mixin.py:149} INFO - 680:	learn: 8048154.8001976	total: 7m 55s	remaining: 3m 42s
+[2023-05-26T02:41:20.302+0000] {logging_mixin.py:149} INFO - 681:	learn: 8048153.9656120	total: 7m 56s	remaining: 3m 42s
+[2023-05-26T02:41:21.067+0000] {logging_mixin.py:149} INFO - 682:	learn: 8048153.0727157	total: 7m 57s	remaining: 3m 41s
+[2023-05-26T02:41:21.698+0000] {logging_mixin.py:149} INFO - 683:	learn: 8048151.7572512	total: 7m 58s	remaining: 3m 40s
+[2023-05-26T02:41:22.410+0000] {logging_mixin.py:149} INFO - 684:	learn: 8048149.1485053	total: 7m 58s	remaining: 3m 40s
+[2023-05-26T02:41:23.115+0000] {logging_mixin.py:149} INFO - 685:	learn: 8048147.7958938	total: 7m 59s	remaining: 3m 39s
+[2023-05-26T02:41:23.848+0000] {logging_mixin.py:149} INFO - 686:	learn: 8048147.4580877	total: 8m	remaining: 3m 38s
+[2023-05-26T02:41:24.613+0000] {logging_mixin.py:149} INFO - 687:	learn: 8048145.4586621	total: 8m	remaining: 3m 38s
+[2023-05-26T02:41:25.311+0000] {logging_mixin.py:149} INFO - 688:	learn: 8048144.3563543	total: 8m 1s	remaining: 3m 37s
+[2023-05-26T02:41:25.958+0000] {logging_mixin.py:149} INFO - 689:	learn: 8048143.8380993	total: 8m 2s	remaining: 3m 36s
+[2023-05-26T02:41:26.600+0000] {logging_mixin.py:149} INFO - 690:	learn: 8048143.7413104	total: 8m 2s	remaining: 3m 35s
+[2023-05-26T02:41:27.308+0000] {logging_mixin.py:149} INFO - 691:	learn: 8048143.1387123	total: 8m 3s	remaining: 3m 35s
+[2023-05-26T02:41:27.960+0000] {logging_mixin.py:149} INFO - 692:	learn: 8048142.6844878	total: 8m 4s	remaining: 3m 34s
+[2023-05-26T02:41:28.654+0000] {logging_mixin.py:149} INFO - 693:	learn: 8048142.5958395	total: 8m 4s	remaining: 3m 33s
+[2023-05-26T02:41:29.428+0000] {logging_mixin.py:149} INFO - 694:	learn: 8048140.7534242	total: 8m 5s	remaining: 3m 33s
+[2023-05-26T02:41:30.188+0000] {logging_mixin.py:149} INFO - 695:	learn: 8048140.4700963	total: 8m 6s	remaining: 3m 32s
+[2023-05-26T02:41:30.898+0000] {logging_mixin.py:149} INFO - 696:	learn: 8048140.2262406	total: 8m 7s	remaining: 3m 31s
+[2023-05-26T02:41:31.510+0000] {logging_mixin.py:149} INFO - 697:	learn: 8048139.9729619	total: 8m 7s	remaining: 3m 31s
+[2023-05-26T02:41:32.133+0000] {logging_mixin.py:149} INFO - 698:	learn: 8048139.5061482	total: 8m 8s	remaining: 3m 30s
+[2023-05-26T02:41:32.804+0000] {logging_mixin.py:149} INFO - 699:	learn: 8048137.9425677	total: 8m 9s	remaining: 3m 29s
+[2023-05-26T02:41:33.566+0000] {logging_mixin.py:149} INFO - 700:	learn: 8048135.1429831	total: 8m 9s	remaining: 3m 28s
+[2023-05-26T02:41:34.275+0000] {logging_mixin.py:149} INFO - 701:	learn: 8048133.3413966	total: 8m 10s	remaining: 3m 28s
+[2023-05-26T02:41:35.027+0000] {logging_mixin.py:149} INFO - 702:	learn: 8048132.0532071	total: 8m 11s	remaining: 3m 27s
+[2023-05-26T02:41:35.722+0000] {logging_mixin.py:149} INFO - 703:	learn: 8048130.2290958	total: 8m 12s	remaining: 3m 26s
+[2023-05-26T02:41:36.312+0000] {logging_mixin.py:149} INFO - 704:	learn: 8048129.8385120	total: 8m 12s	remaining: 3m 26s
+[2023-05-26T02:41:37.036+0000] {logging_mixin.py:149} INFO - 705:	learn: 8048128.5826405	total: 8m 13s	remaining: 3m 25s
+[2023-05-26T02:41:37.840+0000] {logging_mixin.py:149} INFO - 706:	learn: 8048127.5189407	total: 8m 14s	remaining: 3m 24s
+[2023-05-26T02:41:38.495+0000] {logging_mixin.py:149} INFO - 707:	learn: 8048125.9486239	total: 8m 14s	remaining: 3m 24s
+[2023-05-26T02:41:39.244+0000] {logging_mixin.py:149} INFO - 708:	learn: 8048125.6007249	total: 8m 15s	remaining: 3m 23s
+[2023-05-26T02:41:39.956+0000] {logging_mixin.py:149} INFO - 709:	learn: 8048125.4725123	total: 8m 16s	remaining: 3m 22s
+[2023-05-26T02:41:40.662+0000] {logging_mixin.py:149} INFO - 710:	learn: 8048123.1882255	total: 8m 16s	remaining: 3m 22s
+[2023-05-26T02:41:41.424+0000] {logging_mixin.py:149} INFO - 711:	learn: 8048122.3850514	total: 8m 17s	remaining: 3m 21s
+[2023-05-26T02:41:42.117+0000] {logging_mixin.py:149} INFO - 712:	learn: 8048122.0793645	total: 8m 18s	remaining: 3m 20s
+[2023-05-26T02:41:42.761+0000] {logging_mixin.py:149} INFO - 713:	learn: 8048121.0737231	total: 8m 19s	remaining: 3m 19s
+[2023-05-26T02:41:43.410+0000] {logging_mixin.py:149} INFO - 714:	learn: 8048119.8569004	total: 8m 19s	remaining: 3m 19s
+[2023-05-26T02:41:44.140+0000] {logging_mixin.py:149} INFO - 715:	learn: 8048117.0175434	total: 8m 20s	remaining: 3m 18s
+[2023-05-26T02:41:44.950+0000] {logging_mixin.py:149} INFO - 716:	learn: 8048117.0092768	total: 8m 21s	remaining: 3m 17s
+[2023-05-26T02:41:45.700+0000] {logging_mixin.py:149} INFO - 717:	learn: 8048115.6675721	total: 8m 22s	remaining: 3m 17s
+[2023-05-26T02:41:46.521+0000] {logging_mixin.py:149} INFO - 718:	learn: 8048115.6547168	total: 8m 22s	remaining: 3m 16s
+[2023-05-26T02:41:47.193+0000] {logging_mixin.py:149} INFO - 719:	learn: 8048113.5898887	total: 8m 23s	remaining: 3m 15s
+[2023-05-26T02:41:47.885+0000] {logging_mixin.py:149} INFO - 720:	learn: 8048111.7535941	total: 8m 24s	remaining: 3m 15s
+[2023-05-26T02:41:48.564+0000] {logging_mixin.py:149} INFO - 721:	learn: 8048109.9086606	total: 8m 24s	remaining: 3m 14s
+[2023-05-26T02:41:49.188+0000] {logging_mixin.py:149} INFO - 722:	learn: 8048109.3745872	total: 8m 25s	remaining: 3m 13s
+[2023-05-26T02:41:49.773+0000] {logging_mixin.py:149} INFO - 723:	learn: 8048108.4994020	total: 8m 26s	remaining: 3m 12s
+[2023-05-26T02:41:50.430+0000] {logging_mixin.py:149} INFO - 724:	learn: 8048108.0251645	total: 8m 26s	remaining: 3m 12s
+[2023-05-26T02:41:51.105+0000] {logging_mixin.py:149} INFO - 725:	learn: 8048107.4870070	total: 8m 27s	remaining: 3m 11s
+[2023-05-26T02:41:51.812+0000] {logging_mixin.py:149} INFO - 726:	learn: 8048106.4610455	total: 8m 28s	remaining: 3m 10s
+[2023-05-26T02:41:52.483+0000] {logging_mixin.py:149} INFO - 727:	learn: 8048105.3128290	total: 8m 28s	remaining: 3m 10s
+[2023-05-26T02:41:53.220+0000] {logging_mixin.py:149} INFO - 728:	learn: 8048105.2841979	total: 8m 29s	remaining: 3m 9s
+[2023-05-26T02:41:53.969+0000] {logging_mixin.py:149} INFO - 729:	learn: 8048105.2019910	total: 8m 30s	remaining: 3m 8s
+[2023-05-26T02:41:54.784+0000] {logging_mixin.py:149} INFO - 730:	learn: 8048104.9630440	total: 8m 31s	remaining: 3m 8s
+[2023-05-26T02:41:55.527+0000] {logging_mixin.py:149} INFO - 731:	learn: 8048104.9562952	total: 8m 31s	remaining: 3m 7s
+[2023-05-26T02:41:56.331+0000] {logging_mixin.py:149} INFO - 732:	learn: 8048104.9495790	total: 8m 32s	remaining: 3m 6s
+[2023-05-26T02:41:57.075+0000] {logging_mixin.py:149} INFO - 733:	learn: 8048101.6462982	total: 8m 33s	remaining: 3m 6s
+[2023-05-26T02:41:57.775+0000] {logging_mixin.py:149} INFO - 734:	learn: 8048100.8629304	total: 8m 34s	remaining: 3m 5s
+[2023-05-26T02:41:58.472+0000] {logging_mixin.py:149} INFO - 735:	learn: 8048099.5021192	total: 8m 34s	remaining: 3m 4s
+[2023-05-26T02:41:59.137+0000] {logging_mixin.py:149} INFO - 736:	learn: 8048098.4999709	total: 8m 35s	remaining: 3m 3s
+[2023-05-26T02:41:59.781+0000] {logging_mixin.py:149} INFO - 737:	learn: 8048098.1309888	total: 8m 36s	remaining: 3m 3s
+[2023-05-26T02:42:00.466+0000] {logging_mixin.py:149} INFO - 738:	learn: 8048097.2219006	total: 8m 36s	remaining: 3m 2s
+[2023-05-26T02:42:01.190+0000] {logging_mixin.py:149} INFO - 739:	learn: 8048096.0974154	total: 8m 37s	remaining: 3m 1s
+[2023-05-26T02:42:01.925+0000] {logging_mixin.py:149} INFO - 740:	learn: 8048095.6510578	total: 8m 38s	remaining: 3m 1s
+[2023-05-26T02:42:02.593+0000] {logging_mixin.py:149} INFO - 741:	learn: 8048093.9019526	total: 8m 38s	remaining: 3m
+[2023-05-26T02:42:03.292+0000] {logging_mixin.py:149} INFO - 742:	learn: 8048092.6922529	total: 8m 39s	remaining: 2m 59s
+[2023-05-26T02:42:04.067+0000] {logging_mixin.py:149} INFO - 743:	learn: 8048092.6753232	total: 8m 40s	remaining: 2m 59s
+[2023-05-26T02:42:04.751+0000] {logging_mixin.py:149} INFO - 744:	learn: 8048092.6604794	total: 8m 41s	remaining: 2m 58s
+[2023-05-26T02:42:05.465+0000] {logging_mixin.py:149} INFO - 745:	learn: 8048092.1375993	total: 8m 41s	remaining: 2m 57s
+[2023-05-26T02:42:06.152+0000] {logging_mixin.py:149} INFO - 746:	learn: 8048091.3061023	total: 8m 42s	remaining: 2m 56s
+[2023-05-26T02:42:06.832+0000] {logging_mixin.py:149} INFO - 747:	learn: 8048091.2850165	total: 8m 43s	remaining: 2m 56s
+[2023-05-26T02:42:07.556+0000] {logging_mixin.py:149} INFO - 748:	learn: 8048090.7897993	total: 8m 43s	remaining: 2m 55s
+[2023-05-26T02:42:08.287+0000] {logging_mixin.py:149} INFO - 749:	learn: 8048089.5930570	total: 8m 44s	remaining: 2m 54s
+[2023-05-26T02:42:09.020+0000] {logging_mixin.py:149} INFO - 750:	learn: 8048088.3880526	total: 8m 45s	remaining: 2m 54s
+[2023-05-26T02:42:09.669+0000] {logging_mixin.py:149} INFO - 751:	learn: 8048087.8414913	total: 8m 45s	remaining: 2m 53s
+[2023-05-26T02:42:10.403+0000] {logging_mixin.py:149} INFO - 752:	learn: 8048086.2471059	total: 8m 46s	remaining: 2m 52s
+[2023-05-26T02:42:11.056+0000] {logging_mixin.py:149} INFO - 753:	learn: 8048084.1477526	total: 8m 47s	remaining: 2m 52s
+[2023-05-26T02:42:11.809+0000] {logging_mixin.py:149} INFO - 754:	learn: 8048081.9621929	total: 8m 48s	remaining: 2m 51s
+[2023-05-26T02:42:12.469+0000] {logging_mixin.py:149} INFO - 755:	learn: 8048081.6796330	total: 8m 48s	remaining: 2m 50s
+[2023-05-26T02:42:13.263+0000] {logging_mixin.py:149} INFO - 756:	learn: 8048080.7512311	total: 8m 49s	remaining: 2m 49s
+[2023-05-26T02:42:13.903+0000] {logging_mixin.py:149} INFO - 757:	learn: 8048080.4461039	total: 8m 50s	remaining: 2m 49s
+[2023-05-26T02:42:14.612+0000] {logging_mixin.py:149} INFO - 758:	learn: 8048079.7732287	total: 8m 50s	remaining: 2m 48s
+[2023-05-26T02:42:15.296+0000] {logging_mixin.py:149} INFO - 759:	learn: 8048078.5945644	total: 8m 51s	remaining: 2m 47s
+[2023-05-26T02:42:15.969+0000] {logging_mixin.py:149} INFO - 760:	learn: 8048077.5206749	total: 8m 52s	remaining: 2m 47s
+[2023-05-26T02:42:16.734+0000] {logging_mixin.py:149} INFO - 761:	learn: 8048076.8865445	total: 8m 53s	remaining: 2m 46s
+[2023-05-26T02:42:17.478+0000] {logging_mixin.py:149} INFO - 762:	learn: 8048075.9444933	total: 8m 53s	remaining: 2m 45s
+[2023-05-26T02:42:18.139+0000] {logging_mixin.py:149} INFO - 763:	learn: 8048074.5663194	total: 8m 54s	remaining: 2m 45s
+[2023-05-26T02:42:18.819+0000] {logging_mixin.py:149} INFO - 764:	learn: 8048073.3321460	total: 8m 55s	remaining: 2m 44s
+[2023-05-26T02:42:19.453+0000] {logging_mixin.py:149} INFO - 765:	learn: 8048072.4354646	total: 8m 55s	remaining: 2m 43s
+[2023-05-26T02:42:20.089+0000] {logging_mixin.py:149} INFO - 766:	learn: 8048071.1286476	total: 8m 56s	remaining: 2m 42s
+[2023-05-26T02:42:20.719+0000] {logging_mixin.py:149} INFO - 767:	learn: 8048070.7729220	total: 8m 57s	remaining: 2m 42s
+[2023-05-26T02:42:21.352+0000] {logging_mixin.py:149} INFO - 768:	learn: 8048069.7407716	total: 8m 57s	remaining: 2m 41s
+[2023-05-26T02:42:22.051+0000] {logging_mixin.py:149} INFO - 769:	learn: 8048067.5203186	total: 8m 58s	remaining: 2m 40s
+[2023-05-26T02:42:22.842+0000] {logging_mixin.py:149} INFO - 770:	learn: 8048067.3675957	total: 8m 59s	remaining: 2m 40s
+[2023-05-26T02:42:23.508+0000] {logging_mixin.py:149} INFO - 771:	learn: 8048065.1874310	total: 8m 59s	remaining: 2m 39s
+[2023-05-26T02:42:24.231+0000] {logging_mixin.py:149} INFO - 772:	learn: 8048064.2190262	total: 9m	remaining: 2m 38s
+[2023-05-26T02:42:24.912+0000] {logging_mixin.py:149} INFO - 773:	learn: 8048062.1828229	total: 9m 1s	remaining: 2m 38s
+[2023-05-26T02:42:25.642+0000] {logging_mixin.py:149} INFO - 774:	learn: 8048060.3474771	total: 9m 1s	remaining: 2m 37s
+[2023-05-26T02:42:26.354+0000] {logging_mixin.py:149} INFO - 775:	learn: 8048059.6893588	total: 9m 2s	remaining: 2m 36s
+[2023-05-26T02:42:27.018+0000] {logging_mixin.py:149} INFO - 776:	learn: 8048059.3575077	total: 9m 3s	remaining: 2m 35s
+[2023-05-26T02:42:27.729+0000] {logging_mixin.py:149} INFO - 777:	learn: 8048059.0321137	total: 9m 4s	remaining: 2m 35s
+[2023-05-26T02:42:28.398+0000] {logging_mixin.py:149} INFO - 778:	learn: 8048058.7229425	total: 9m 4s	remaining: 2m 34s
+[2023-05-26T02:42:29.089+0000] {logging_mixin.py:149} INFO - 779:	learn: 8048057.3806202	total: 9m 5s	remaining: 2m 33s
+[2023-05-26T02:42:29.697+0000] {logging_mixin.py:149} INFO - 780:	learn: 8048056.6992734	total: 9m 6s	remaining: 2m 33s
+[2023-05-26T02:42:30.403+0000] {logging_mixin.py:149} INFO - 781:	learn: 8048056.5138505	total: 9m 6s	remaining: 2m 32s
+[2023-05-26T02:42:31.107+0000] {logging_mixin.py:149} INFO - 782:	learn: 8048055.2633885	total: 9m 7s	remaining: 2m 31s
+[2023-05-26T02:42:31.798+0000] {logging_mixin.py:149} INFO - 783:	learn: 8048054.1253120	total: 9m 8s	remaining: 2m 31s
+[2023-05-26T02:42:32.529+0000] {logging_mixin.py:149} INFO - 784:	learn: 8048051.5078074	total: 9m 8s	remaining: 2m 30s
+[2023-05-26T02:42:33.165+0000] {logging_mixin.py:149} INFO - 785:	learn: 8048051.3043183	total: 9m 9s	remaining: 2m 29s
+[2023-05-26T02:42:33.802+0000] {logging_mixin.py:149} INFO - 786:	learn: 8048050.9294909	total: 9m 10s	remaining: 2m 28s
+[2023-05-26T02:42:34.476+0000] {logging_mixin.py:149} INFO - 787:	learn: 8048050.3088488	total: 9m 10s	remaining: 2m 28s
+[2023-05-26T02:42:35.202+0000] {logging_mixin.py:149} INFO - 788:	learn: 8048049.6818973	total: 9m 11s	remaining: 2m 27s
+[2023-05-26T02:42:35.932+0000] {logging_mixin.py:149} INFO - 789:	learn: 8048049.5689605	total: 9m 12s	remaining: 2m 26s
+[2023-05-26T02:42:36.649+0000] {logging_mixin.py:149} INFO - 790:	learn: 8048049.0554691	total: 9m 12s	remaining: 2m 26s
+[2023-05-26T02:42:37.288+0000] {logging_mixin.py:149} INFO - 791:	learn: 8048048.3933002	total: 9m 13s	remaining: 2m 25s
+[2023-05-26T02:42:38.065+0000] {logging_mixin.py:149} INFO - 792:	learn: 8048048.1598183	total: 9m 14s	remaining: 2m 24s
+[2023-05-26T02:42:38.888+0000] {logging_mixin.py:149} INFO - 793:	learn: 8048048.1538482	total: 9m 15s	remaining: 2m 24s
+[2023-05-26T02:42:39.625+0000] {logging_mixin.py:149} INFO - 794:	learn: 8048047.4989469	total: 9m 15s	remaining: 2m 23s
+[2023-05-26T02:42:40.398+0000] {logging_mixin.py:149} INFO - 795:	learn: 8048047.4926409	total: 9m 16s	remaining: 2m 22s
+[2023-05-26T02:42:41.119+0000] {logging_mixin.py:149} INFO - 796:	learn: 8048047.4640926	total: 9m 17s	remaining: 2m 21s
+[2023-05-26T02:42:41.818+0000] {logging_mixin.py:149} INFO - 797:	learn: 8048046.5056565	total: 9m 18s	remaining: 2m 21s
+[2023-05-26T02:42:42.457+0000] {logging_mixin.py:149} INFO - 798:	learn: 8048046.1271778	total: 9m 18s	remaining: 2m 20s
+[2023-05-26T02:42:43.111+0000] {logging_mixin.py:149} INFO - 799:	learn: 8048044.8088198	total: 9m 19s	remaining: 2m 19s
+[2023-05-26T02:42:43.771+0000] {logging_mixin.py:149} INFO - 800:	learn: 8048044.2478966	total: 9m 20s	remaining: 2m 19s
+[2023-05-26T02:42:44.441+0000] {logging_mixin.py:149} INFO - 801:	learn: 8048042.8897831	total: 9m 20s	remaining: 2m 18s
+[2023-05-26T02:42:45.079+0000] {logging_mixin.py:149} INFO - 802:	learn: 8048041.1458461	total: 9m 21s	remaining: 2m 17s
+[2023-05-26T02:42:45.823+0000] {logging_mixin.py:149} INFO - 803:	learn: 8048039.9951486	total: 9m 22s	remaining: 2m 17s
+[2023-05-26T02:42:46.538+0000] {logging_mixin.py:149} INFO - 804:	learn: 8048038.7631013	total: 9m 22s	remaining: 2m 16s
+[2023-05-26T02:42:47.288+0000] {logging_mixin.py:149} INFO - 805:	learn: 8048038.2644231	total: 9m 23s	remaining: 2m 15s
+[2023-05-26T02:42:47.957+0000] {logging_mixin.py:149} INFO - 806:	learn: 8048038.1388073	total: 9m 24s	remaining: 2m 14s
+[2023-05-26T02:42:48.705+0000] {logging_mixin.py:149} INFO - 807:	learn: 8048037.5043250	total: 9m 25s	remaining: 2m 14s
+[2023-05-26T02:42:49.331+0000] {logging_mixin.py:149} INFO - 808:	learn: 8048036.6705015	total: 9m 25s	remaining: 2m 13s
+[2023-05-26T02:42:50.100+0000] {logging_mixin.py:149} INFO - 809:	learn: 8048036.6642692	total: 9m 26s	remaining: 2m 12s
+[2023-05-26T02:42:50.812+0000] {logging_mixin.py:149} INFO - 810:	learn: 8048036.2627718	total: 9m 27s	remaining: 2m 12s
+[2023-05-26T02:42:51.552+0000] {logging_mixin.py:149} INFO - 811:	learn: 8048036.1747237	total: 9m 27s	remaining: 2m 11s
+[2023-05-26T02:42:52.227+0000] {logging_mixin.py:149} INFO - 812:	learn: 8048035.4378142	total: 9m 28s	remaining: 2m 10s
+[2023-05-26T02:42:52.831+0000] {logging_mixin.py:149} INFO - 813:	learn: 8048035.1229155	total: 9m 29s	remaining: 2m 10s
+[2023-05-26T02:42:53.533+0000] {logging_mixin.py:149} INFO - 814:	learn: 8048033.4661708	total: 9m 29s	remaining: 2m 9s
+[2023-05-26T02:42:54.235+0000] {logging_mixin.py:149} INFO - 815:	learn: 8048032.9880504	total: 9m 30s	remaining: 2m 8s
+[2023-05-26T02:42:54.899+0000] {logging_mixin.py:149} INFO - 816:	learn: 8048030.8532216	total: 9m 31s	remaining: 2m 7s
+[2023-05-26T02:42:55.548+0000] {logging_mixin.py:149} INFO - 817:	learn: 8048029.3908596	total: 9m 31s	remaining: 2m 7s
+[2023-05-26T02:42:56.276+0000] {logging_mixin.py:149} INFO - 818:	learn: 8048028.2752865	total: 9m 32s	remaining: 2m 6s
+[2023-05-26T02:42:57.069+0000] {logging_mixin.py:149} INFO - 819:	learn: 8048028.2708987	total: 9m 33s	remaining: 2m 5s
+[2023-05-26T02:42:57.744+0000] {logging_mixin.py:149} INFO - 820:	learn: 8048027.6688346	total: 9m 34s	remaining: 2m 5s
+[2023-05-26T02:42:58.504+0000] {logging_mixin.py:149} INFO - 821:	learn: 8048027.3140639	total: 9m 34s	remaining: 2m 4s
+[2023-05-26T02:42:59.114+0000] {logging_mixin.py:149} INFO - 822:	learn: 8048026.6266236	total: 9m 35s	remaining: 2m 3s
+[2023-05-26T02:42:59.790+0000] {logging_mixin.py:149} INFO - 823:	learn: 8048026.3142190	total: 9m 36s	remaining: 2m 3s
+[2023-05-26T02:43:00.488+0000] {logging_mixin.py:149} INFO - 824:	learn: 8048024.6042149	total: 9m 36s	remaining: 2m 2s
+[2023-05-26T02:43:01.280+0000] {logging_mixin.py:149} INFO - 825:	learn: 8048024.1242428	total: 9m 37s	remaining: 2m 1s
+[2023-05-26T02:43:01.965+0000] {logging_mixin.py:149} INFO - 826:	learn: 8048022.9648142	total: 9m 38s	remaining: 2m
+[2023-05-26T02:43:02.654+0000] {logging_mixin.py:149} INFO - 827:	learn: 8048022.7666098	total: 9m 38s	remaining: 2m
+[2023-05-26T02:43:03.377+0000] {logging_mixin.py:149} INFO - 828:	learn: 8048022.3813822	total: 9m 39s	remaining: 1m 59s
+[2023-05-26T02:43:04.015+0000] {logging_mixin.py:149} INFO - 829:	learn: 8048021.2562820	total: 9m 40s	remaining: 1m 58s
+[2023-05-26T02:43:04.805+0000] {logging_mixin.py:149} INFO - 830:	learn: 8048020.6513543	total: 9m 41s	remaining: 1m 58s
+[2023-05-26T02:43:05.523+0000] {logging_mixin.py:149} INFO - 831:	learn: 8048020.1855241	total: 9m 41s	remaining: 1m 57s
+[2023-05-26T02:43:06.170+0000] {logging_mixin.py:149} INFO - 832:	learn: 8048019.0234652	total: 9m 42s	remaining: 1m 56s
+[2023-05-26T02:43:06.939+0000] {logging_mixin.py:149} INFO - 833:	learn: 8048017.5224169	total: 9m 43s	remaining: 1m 56s
+[2023-05-26T02:43:07.652+0000] {logging_mixin.py:149} INFO - 834:	learn: 8048016.2444757	total: 9m 43s	remaining: 1m 55s
+[2023-05-26T02:43:08.344+0000] {logging_mixin.py:149} INFO - 835:	learn: 8048015.5735210	total: 9m 44s	remaining: 1m 54s
+[2023-05-26T02:43:09.095+0000] {logging_mixin.py:149} INFO - 836:	learn: 8048014.2054337	total: 9m 45s	remaining: 1m 54s
+[2023-05-26T02:43:09.896+0000] {logging_mixin.py:149} INFO - 837:	learn: 8048012.8933877	total: 9m 46s	remaining: 1m 53s
+[2023-05-26T02:43:10.581+0000] {logging_mixin.py:149} INFO - 838:	learn: 8048012.7600363	total: 9m 46s	remaining: 1m 52s
+[2023-05-26T02:43:11.251+0000] {logging_mixin.py:149} INFO - 839:	learn: 8048011.8898017	total: 9m 47s	remaining: 1m 51s
+[2023-05-26T02:43:12.023+0000] {logging_mixin.py:149} INFO - 840:	learn: 8048010.5535541	total: 9m 48s	remaining: 1m 51s
+[2023-05-26T02:43:12.689+0000] {logging_mixin.py:149} INFO - 841:	learn: 8048010.3237498	total: 9m 48s	remaining: 1m 50s
+[2023-05-26T02:43:13.355+0000] {logging_mixin.py:149} INFO - 842:	learn: 8048009.9178265	total: 9m 49s	remaining: 1m 49s
+[2023-05-26T02:43:14.052+0000] {logging_mixin.py:149} INFO - 843:	learn: 8048009.7585612	total: 9m 50s	remaining: 1m 49s
+[2023-05-26T02:43:14.704+0000] {logging_mixin.py:149} INFO - 844:	learn: 8048009.1271635	total: 9m 50s	remaining: 1m 48s
+[2023-05-26T02:43:15.371+0000] {logging_mixin.py:149} INFO - 845:	learn: 8048008.7155658	total: 9m 51s	remaining: 1m 47s
+[2023-05-26T02:43:16.023+0000] {logging_mixin.py:149} INFO - 846:	learn: 8048008.1631874	total: 9m 52s	remaining: 1m 46s
+[2023-05-26T02:43:16.626+0000] {logging_mixin.py:149} INFO - 847:	learn: 8048007.9939733	total: 9m 52s	remaining: 1m 46s
+[2023-05-26T02:43:17.372+0000] {logging_mixin.py:149} INFO - 848:	learn: 8048006.9971194	total: 9m 53s	remaining: 1m 45s
+[2023-05-26T02:43:18.024+0000] {logging_mixin.py:149} INFO - 849:	learn: 8048006.4052972	total: 9m 54s	remaining: 1m 44s
+[2023-05-26T02:43:18.685+0000] {logging_mixin.py:149} INFO - 850:	learn: 8048005.6127580	total: 9m 54s	remaining: 1m 44s
+[2023-05-26T02:43:19.277+0000] {logging_mixin.py:149} INFO - 851:	learn: 8048003.2593535	total: 9m 55s	remaining: 1m 43s
+[2023-05-26T02:43:19.949+0000] {logging_mixin.py:149} INFO - 852:	learn: 8048003.0515444	total: 9m 56s	remaining: 1m 42s
+[2023-05-26T02:43:20.623+0000] {logging_mixin.py:149} INFO - 853:	learn: 8048002.7061669	total: 9m 56s	remaining: 1m 42s
+[2023-05-26T02:43:21.362+0000] {logging_mixin.py:149} INFO - 854:	learn: 8048001.9723963	total: 9m 57s	remaining: 1m 41s
+[2023-05-26T02:43:21.989+0000] {logging_mixin.py:149} INFO - 855:	learn: 8048001.2262806	total: 9m 58s	remaining: 1m 40s
+[2023-05-26T02:43:22.630+0000] {logging_mixin.py:149} INFO - 856:	learn: 8048000.9499434	total: 9m 58s	remaining: 1m 39s
+[2023-05-26T02:43:23.390+0000] {logging_mixin.py:149} INFO - 857:	learn: 8048000.3548224	total: 9m 59s	remaining: 1m 39s
+[2023-05-26T02:43:24.063+0000] {logging_mixin.py:149} INFO - 858:	learn: 8047998.8260452	total: 10m	remaining: 1m 38s
+[2023-05-26T02:43:24.720+0000] {logging_mixin.py:149} INFO - 859:	learn: 8047998.3602565	total: 10m 1s	remaining: 1m 37s
+[2023-05-26T02:43:25.492+0000] {logging_mixin.py:149} INFO - 860:	learn: 8047997.8131194	total: 10m 1s	remaining: 1m 37s
+[2023-05-26T02:43:26.192+0000] {logging_mixin.py:149} INFO - 861:	learn: 8047997.2794756	total: 10m 2s	remaining: 1m 36s
+[2023-05-26T02:43:26.961+0000] {logging_mixin.py:149} INFO - 862:	learn: 8047996.4554537	total: 10m 3s	remaining: 1m 35s
+[2023-05-26T02:43:27.692+0000] {logging_mixin.py:149} INFO - 863:	learn: 8047995.1152689	total: 10m 3s	remaining: 1m 35s
+[2023-05-26T02:43:28.332+0000] {logging_mixin.py:149} INFO - 864:	learn: 8047994.8018145	total: 10m 4s	remaining: 1m 34s
+[2023-05-26T02:43:29.046+0000] {logging_mixin.py:149} INFO - 865:	learn: 8047994.2565452	total: 10m 5s	remaining: 1m 33s
+[2023-05-26T02:43:29.815+0000] {logging_mixin.py:149} INFO - 866:	learn: 8047993.3421531	total: 10m 6s	remaining: 1m 32s
+[2023-05-26T02:43:30.503+0000] {logging_mixin.py:149} INFO - 867:	learn: 8047992.4660366	total: 10m 6s	remaining: 1m 32s
+[2023-05-26T02:43:31.174+0000] {logging_mixin.py:149} INFO - 868:	learn: 8047991.2237177	total: 10m 7s	remaining: 1m 31s
+[2023-05-26T02:43:31.822+0000] {logging_mixin.py:149} INFO - 869:	learn: 8047990.7424672	total: 10m 8s	remaining: 1m 30s
+[2023-05-26T02:43:32.511+0000] {logging_mixin.py:149} INFO - 870:	learn: 8047989.7427684	total: 10m 8s	remaining: 1m 30s
+[2023-05-26T02:43:33.195+0000] {logging_mixin.py:149} INFO - 871:	learn: 8047988.8791069	total: 10m 9s	remaining: 1m 29s
+[2023-05-26T02:43:33.862+0000] {logging_mixin.py:149} INFO - 872:	learn: 8047988.0748831	total: 10m 10s	remaining: 1m 28s
+[2023-05-26T02:43:34.468+0000] {logging_mixin.py:149} INFO - 873:	learn: 8047986.3084994	total: 10m 10s	remaining: 1m 28s
+[2023-05-26T02:43:35.269+0000] {logging_mixin.py:149} INFO - 874:	learn: 8047985.4643521	total: 10m 11s	remaining: 1m 27s
+[2023-05-26T02:43:35.932+0000] {logging_mixin.py:149} INFO - 875:	learn: 8047984.4935405	total: 10m 12s	remaining: 1m 26s
+[2023-05-26T02:43:36.669+0000] {logging_mixin.py:149} INFO - 876:	learn: 8047983.2919134	total: 10m 12s	remaining: 1m 25s
+[2023-05-26T02:43:37.312+0000] {logging_mixin.py:149} INFO - 877:	learn: 8047982.9943104	total: 10m 13s	remaining: 1m 25s
+[2023-05-26T02:43:38.019+0000] {logging_mixin.py:149} INFO - 878:	learn: 8047981.5669692	total: 10m 14s	remaining: 1m 24s
+[2023-05-26T02:43:38.776+0000] {logging_mixin.py:149} INFO - 879:	learn: 8047980.9146848	total: 10m 15s	remaining: 1m 23s
+[2023-05-26T02:43:39.430+0000] {logging_mixin.py:149} INFO - 880:	learn: 8047980.6468001	total: 10m 15s	remaining: 1m 23s
+[2023-05-26T02:43:40.088+0000] {logging_mixin.py:149} INFO - 881:	learn: 8047980.4902382	total: 10m 16s	remaining: 1m 22s
+[2023-05-26T02:43:40.760+0000] {logging_mixin.py:149} INFO - 882:	learn: 8047980.1025789	total: 10m 17s	remaining: 1m 21s
+[2023-05-26T02:43:41.445+0000] {logging_mixin.py:149} INFO - 883:	learn: 8047979.6412881	total: 10m 17s	remaining: 1m 21s
+[2023-05-26T02:43:42.122+0000] {logging_mixin.py:149} INFO - 884:	learn: 8047979.3670897	total: 10m 18s	remaining: 1m 20s
+[2023-05-26T02:43:42.743+0000] {logging_mixin.py:149} INFO - 885:	learn: 8047979.2025233	total: 10m 19s	remaining: 1m 19s
+[2023-05-26T02:43:43.446+0000] {logging_mixin.py:149} INFO - 886:	learn: 8047978.2189016	total: 10m 19s	remaining: 1m 18s
+[2023-05-26T02:43:44.086+0000] {logging_mixin.py:149} INFO - 887:	learn: 8047977.6813939	total: 10m 20s	remaining: 1m 18s
+[2023-05-26T02:43:44.827+0000] {logging_mixin.py:149} INFO - 888:	learn: 8047976.3703599	total: 10m 21s	remaining: 1m 17s
+[2023-05-26T02:43:45.499+0000] {logging_mixin.py:149} INFO - 889:	learn: 8047975.8116592	total: 10m 21s	remaining: 1m 16s
+[2023-05-26T02:43:46.145+0000] {logging_mixin.py:149} INFO - 890:	learn: 8047975.7246873	total: 10m 22s	remaining: 1m 16s
+[2023-05-26T02:43:46.814+0000] {logging_mixin.py:149} INFO - 891:	learn: 8047975.6207224	total: 10m 23s	remaining: 1m 15s
+[2023-05-26T02:43:47.474+0000] {logging_mixin.py:149} INFO - 892:	learn: 8047974.7992679	total: 10m 23s	remaining: 1m 14s
+[2023-05-26T02:43:48.258+0000] {logging_mixin.py:149} INFO - 893:	learn: 8047974.2995526	total: 10m 24s	remaining: 1m 14s
+[2023-05-26T02:43:48.980+0000] {logging_mixin.py:149} INFO - 894:	learn: 8047973.3043628	total: 10m 25s	remaining: 1m 13s
+[2023-05-26T02:43:49.733+0000] {logging_mixin.py:149} INFO - 895:	learn: 8047972.1262900	total: 10m 26s	remaining: 1m 12s
+[2023-05-26T02:43:50.464+0000] {logging_mixin.py:149} INFO - 896:	learn: 8047972.1046475	total: 10m 26s	remaining: 1m 11s
+[2023-05-26T02:43:51.137+0000] {logging_mixin.py:149} INFO - 897:	learn: 8047971.3032696	total: 10m 27s	remaining: 1m 11s
+[2023-05-26T02:43:51.819+0000] {logging_mixin.py:149} INFO - 898:	learn: 8047970.1173187	total: 10m 28s	remaining: 1m 10s
+[2023-05-26T02:43:52.390+0000] {logging_mixin.py:149} INFO - 899:	learn: 8047968.8387831	total: 10m 28s	remaining: 1m 9s
+[2023-05-26T02:43:53.068+0000] {logging_mixin.py:149} INFO - 900:	learn: 8047967.9070115	total: 10m 29s	remaining: 1m 9s
+[2023-05-26T02:43:53.809+0000] {logging_mixin.py:149} INFO - 901:	learn: 8047966.9975665	total: 10m 30s	remaining: 1m 8s
+[2023-05-26T02:43:54.502+0000] {logging_mixin.py:149} INFO - 902:	learn: 8047966.2521111	total: 10m 30s	remaining: 1m 7s
+[2023-05-26T02:43:55.162+0000] {logging_mixin.py:149} INFO - 903:	learn: 8047965.6187892	total: 10m 31s	remaining: 1m 7s
+[2023-05-26T02:43:55.830+0000] {logging_mixin.py:149} INFO - 904:	learn: 8047965.4228874	total: 10m 32s	remaining: 1m 6s
+[2023-05-26T02:43:56.456+0000] {logging_mixin.py:149} INFO - 905:	learn: 8047965.3139719	total: 10m 32s	remaining: 1m 5s
+[2023-05-26T02:43:57.098+0000] {logging_mixin.py:149} INFO - 906:	learn: 8047965.2303141	total: 10m 33s	remaining: 1m 4s
+[2023-05-26T02:43:57.782+0000] {logging_mixin.py:149} INFO - 907:	learn: 8047965.0178227	total: 10m 34s	remaining: 1m 4s
+[2023-05-26T02:43:58.455+0000] {logging_mixin.py:149} INFO - 908:	learn: 8047964.9650098	total: 10m 34s	remaining: 1m 3s
+[2023-05-26T02:43:59.187+0000] {logging_mixin.py:149} INFO - 909:	learn: 8047964.9214286	total: 10m 35s	remaining: 1m 2s
+[2023-05-26T02:43:59.879+0000] {logging_mixin.py:149} INFO - 910:	learn: 8047964.6652737	total: 10m 36s	remaining: 1m 2s
+[2023-05-26T02:44:00.605+0000] {logging_mixin.py:149} INFO - 911:	learn: 8047964.5476927	total: 10m 36s	remaining: 1m 1s
+[2023-05-26T02:44:01.336+0000] {logging_mixin.py:149} INFO - 912:	learn: 8047964.1654951	total: 10m 37s	remaining: 1m
+[2023-05-26T02:44:02.080+0000] {logging_mixin.py:149} INFO - 913:	learn: 8047963.3126328	total: 10m 38s	remaining: 1m
+[2023-05-26T02:44:02.873+0000] {logging_mixin.py:149} INFO - 914:	learn: 8047963.0153217	total: 10m 39s	remaining: 59.4s
+[2023-05-26T02:44:03.558+0000] {logging_mixin.py:149} INFO - 915:	learn: 8047962.9831139	total: 10m 39s	remaining: 58.7s
+[2023-05-26T02:44:04.290+0000] {logging_mixin.py:149} INFO - 916:	learn: 8047962.2529728	total: 10m 40s	remaining: 58s
+[2023-05-26T02:44:04.884+0000] {logging_mixin.py:149} INFO - 917:	learn: 8047961.9264330	total: 10m 41s	remaining: 57.3s
+[2023-05-26T02:44:05.631+0000] {logging_mixin.py:149} INFO - 918:	learn: 8047961.3298253	total: 10m 41s	remaining: 56.6s
+[2023-05-26T02:44:06.304+0000] {logging_mixin.py:149} INFO - 919:	learn: 8047961.2076557	total: 10m 42s	remaining: 55.9s
+[2023-05-26T02:44:07.093+0000] {logging_mixin.py:149} INFO - 920:	learn: 8047960.8538409	total: 10m 43s	remaining: 55.2s
+[2023-05-26T02:44:07.735+0000] {logging_mixin.py:149} INFO - 921:	learn: 8047960.8037517	total: 10m 44s	remaining: 54.5s
+[2023-05-26T02:44:08.480+0000] {logging_mixin.py:149} INFO - 922:	learn: 8047960.6568855	total: 10m 44s	remaining: 53.8s
+[2023-05-26T02:44:09.142+0000] {logging_mixin.py:149} INFO - 923:	learn: 8047960.2022781	total: 10m 45s	remaining: 53.1s
+[2023-05-26T02:44:09.849+0000] {logging_mixin.py:149} INFO - 924:	learn: 8047959.0465618	total: 10m 46s	remaining: 52.4s
+[2023-05-26T02:44:10.516+0000] {logging_mixin.py:149} INFO - 925:	learn: 8047958.5137544	total: 10m 46s	remaining: 51.7s
+[2023-05-26T02:44:11.195+0000] {logging_mixin.py:149} INFO - 926:	learn: 8047958.0128639	total: 10m 47s	remaining: 51s
+[2023-05-26T02:44:11.814+0000] {logging_mixin.py:149} INFO - 927:	learn: 8047957.8036035	total: 10m 48s	remaining: 50.3s
+[2023-05-26T02:44:12.480+0000] {logging_mixin.py:149} INFO - 928:	learn: 8047957.7597204	total: 10m 48s	remaining: 49.6s
+[2023-05-26T02:44:13.160+0000] {logging_mixin.py:149} INFO - 929:	learn: 8047957.1546122	total: 10m 49s	remaining: 48.9s
+[2023-05-26T02:44:13.826+0000] {logging_mixin.py:149} INFO - 930:	learn: 8047956.8040321	total: 10m 50s	remaining: 48.2s
+[2023-05-26T02:44:14.592+0000] {logging_mixin.py:149} INFO - 931:	learn: 8047956.1750494	total: 10m 50s	remaining: 47.5s
+[2023-05-26T02:44:15.282+0000] {logging_mixin.py:149} INFO - 932:	learn: 8047955.4657815	total: 10m 51s	remaining: 46.8s
+[2023-05-26T02:44:16.032+0000] {logging_mixin.py:149} INFO - 933:	learn: 8047954.5566955	total: 10m 52s	remaining: 46.1s
+[2023-05-26T02:44:16.702+0000] {logging_mixin.py:149} INFO - 934:	learn: 8047954.1888865	total: 10m 52s	remaining: 45.4s
+[2023-05-26T02:44:17.370+0000] {logging_mixin.py:149} INFO - 935:	learn: 8047954.1801896	total: 10m 53s	remaining: 44.7s
+[2023-05-26T02:44:18.084+0000] {logging_mixin.py:149} INFO - 936:	learn: 8047953.9034550	total: 10m 54s	remaining: 44s
+[2023-05-26T02:44:18.705+0000] {logging_mixin.py:149} INFO - 937:	learn: 8047953.6525066	total: 10m 54s	remaining: 43.3s
+[2023-05-26T02:44:19.439+0000] {logging_mixin.py:149} INFO - 938:	learn: 8047953.0167260	total: 10m 55s	remaining: 42.6s
+[2023-05-26T02:44:20.176+0000] {logging_mixin.py:149} INFO - 939:	learn: 8047952.7767611	total: 10m 56s	remaining: 41.9s
+[2023-05-26T02:44:20.897+0000] {logging_mixin.py:149} INFO - 940:	learn: 8047952.5006212	total: 10m 57s	remaining: 41.2s
+[2023-05-26T02:44:21.577+0000] {logging_mixin.py:149} INFO - 941:	learn: 8047951.3180149	total: 10m 57s	remaining: 40.5s
+[2023-05-26T02:44:22.217+0000] {logging_mixin.py:149} INFO - 942:	learn: 8047950.4568097	total: 10m 58s	remaining: 39.8s
+[2023-05-26T02:44:22.929+0000] {logging_mixin.py:149} INFO - 943:	learn: 8047949.2459575	total: 10m 59s	remaining: 39.1s
+[2023-05-26T02:44:23.651+0000] {logging_mixin.py:149} INFO - 944:	learn: 8047948.5769828	total: 10m 59s	remaining: 38.4s
+[2023-05-26T02:44:24.392+0000] {logging_mixin.py:149} INFO - 945:	learn: 8047948.0345602	total: 11m	remaining: 37.7s
+[2023-05-26T02:44:25.101+0000] {logging_mixin.py:149} INFO - 946:	learn: 8047947.7474168	total: 11m 1s	remaining: 37s
+[2023-05-26T02:44:25.820+0000] {logging_mixin.py:149} INFO - 947:	learn: 8047947.7224026	total: 11m 2s	remaining: 36.3s
+[2023-05-26T02:44:26.532+0000] {logging_mixin.py:149} INFO - 948:	learn: 8047947.5710097	total: 11m 2s	remaining: 35.6s
+[2023-05-26T02:44:27.264+0000] {logging_mixin.py:149} INFO - 949:	learn: 8047946.5099845	total: 11m 3s	remaining: 34.9s
+[2023-05-26T02:44:28.056+0000] {logging_mixin.py:149} INFO - 950:	learn: 8047946.5041414	total: 11m 4s	remaining: 34.2s
+[2023-05-26T02:44:28.693+0000] {logging_mixin.py:149} INFO - 951:	learn: 8047946.3486517	total: 11m 4s	remaining: 33.5s
+[2023-05-26T02:44:29.391+0000] {logging_mixin.py:149} INFO - 952:	learn: 8047946.1530350	total: 11m 5s	remaining: 32.8s
+[2023-05-26T02:44:30.072+0000] {logging_mixin.py:149} INFO - 953:	learn: 8047945.4857730	total: 11m 6s	remaining: 32.1s
+[2023-05-26T02:44:30.714+0000] {logging_mixin.py:149} INFO - 954:	learn: 8047944.9637399	total: 11m 6s	remaining: 31.4s
+[2023-05-26T02:44:31.350+0000] {logging_mixin.py:149} INFO - 955:	learn: 8047944.8019451	total: 11m 7s	remaining: 30.7s
+[2023-05-26T02:44:31.996+0000] {logging_mixin.py:149} INFO - 956:	learn: 8047944.4612846	total: 11m 8s	remaining: 30s
+[2023-05-26T02:44:32.679+0000] {logging_mixin.py:149} INFO - 957:	learn: 8047944.2235467	total: 11m 8s	remaining: 29.3s
+[2023-05-26T02:44:33.429+0000] {logging_mixin.py:149} INFO - 958:	learn: 8047943.6577702	total: 11m 9s	remaining: 28.6s
+[2023-05-26T02:44:34.156+0000] {logging_mixin.py:149} INFO - 959:	learn: 8047943.4193559	total: 11m 10s	remaining: 27.9s
+[2023-05-26T02:44:34.866+0000] {logging_mixin.py:149} INFO - 960:	learn: 8047942.8824366	total: 11m 11s	remaining: 27.2s
+[2023-05-26T02:44:35.538+0000] {logging_mixin.py:149} INFO - 961:	learn: 8047941.0747296	total: 11m 11s	remaining: 26.5s
+[2023-05-26T02:44:36.324+0000] {logging_mixin.py:149} INFO - 962:	learn: 8047941.0512144	total: 11m 12s	remaining: 25.8s
+[2023-05-26T02:44:36.913+0000] {logging_mixin.py:149} INFO - 963:	learn: 8047940.9734800	total: 11m 13s	remaining: 25.1s
+[2023-05-26T02:44:37.676+0000] {logging_mixin.py:149} INFO - 964:	learn: 8047940.6601586	total: 11m 13s	remaining: 24.4s
+[2023-05-26T02:44:38.369+0000] {logging_mixin.py:149} INFO - 965:	learn: 8047940.0032048	total: 11m 14s	remaining: 23.7s
+[2023-05-26T02:44:39.124+0000] {logging_mixin.py:149} INFO - 966:	learn: 8047939.7947348	total: 11m 15s	remaining: 23s
+[2023-05-26T02:44:39.898+0000] {logging_mixin.py:149} INFO - 967:	learn: 8047939.1578771	total: 11m 16s	remaining: 22.4s
+[2023-05-26T02:44:40.683+0000] {logging_mixin.py:149} INFO - 968:	learn: 8047938.9523013	total: 11m 16s	remaining: 21.7s
+[2023-05-26T02:44:41.366+0000] {logging_mixin.py:149} INFO - 969:	learn: 8047938.8700379	total: 11m 17s	remaining: 21s
+[2023-05-26T02:44:42.100+0000] {logging_mixin.py:149} INFO - 970:	learn: 8047938.2915714	total: 11m 18s	remaining: 20.3s
+[2023-05-26T02:44:42.792+0000] {logging_mixin.py:149} INFO - 971:	learn: 8047938.0747293	total: 11m 19s	remaining: 19.6s
+[2023-05-26T02:44:43.460+0000] {logging_mixin.py:149} INFO - 972:	learn: 8047937.6094429	total: 11m 19s	remaining: 18.9s
+[2023-05-26T02:44:44.151+0000] {logging_mixin.py:149} INFO - 973:	learn: 8047936.3611868	total: 11m 20s	remaining: 18.2s
+[2023-05-26T02:44:44.820+0000] {logging_mixin.py:149} INFO - 974:	learn: 8047936.1826718	total: 11m 21s	remaining: 17.5s
+[2023-05-26T02:44:45.512+0000] {logging_mixin.py:149} INFO - 975:	learn: 8047935.8873742	total: 11m 21s	remaining: 16.8s
+[2023-05-26T02:44:46.200+0000] {logging_mixin.py:149} INFO - 976:	learn: 8047935.6872450	total: 11m 22s	remaining: 16.1s
+[2023-05-26T02:44:46.899+0000] {logging_mixin.py:149} INFO - 977:	learn: 8047935.1963800	total: 11m 23s	remaining: 15.4s
+[2023-05-26T02:44:47.487+0000] {logging_mixin.py:149} INFO - 978:	learn: 8047934.7825947	total: 11m 23s	remaining: 14.7s
+[2023-05-26T02:44:48.169+0000] {logging_mixin.py:149} INFO - 979:	learn: 8047934.1349449	total: 11m 24s	remaining: 14s
+[2023-05-26T02:44:48.818+0000] {logging_mixin.py:149} INFO - 980:	learn: 8047934.0123527	total: 11m 25s	remaining: 13.3s
+[2023-05-26T02:44:49.535+0000] {logging_mixin.py:149} INFO - 981:	learn: 8047933.6501538	total: 11m 25s	remaining: 12.6s
+[2023-05-26T02:44:50.225+0000] {logging_mixin.py:149} INFO - 982:	learn: 8047933.3190403	total: 11m 26s	remaining: 11.9s
+[2023-05-26T02:44:50.843+0000] {logging_mixin.py:149} INFO - 983:	learn: 8047933.0252668	total: 11m 27s	remaining: 11.2s
+[2023-05-26T02:44:51.550+0000] {logging_mixin.py:149} INFO - 984:	learn: 8047931.7778920	total: 11m 27s	remaining: 10.5s
+[2023-05-26T02:44:52.180+0000] {logging_mixin.py:149} INFO - 985:	learn: 8047931.6010154	total: 11m 28s	remaining: 9.77s
+[2023-05-26T02:44:52.846+0000] {logging_mixin.py:149} INFO - 986:	learn: 8047931.4263702	total: 11m 29s	remaining: 9.08s
+[2023-05-26T02:44:53.569+0000] {logging_mixin.py:149} INFO - 987:	learn: 8047930.7830210	total: 11m 29s	remaining: 8.38s
+[2023-05-26T02:44:54.301+0000] {logging_mixin.py:149} INFO - 988:	learn: 8047930.4167942	total: 11m 30s	remaining: 7.68s
+[2023-05-26T02:44:55.007+0000] {logging_mixin.py:149} INFO - 989:	learn: 8047930.1693124	total: 11m 31s	remaining: 6.98s
+[2023-05-26T02:44:55.688+0000] {logging_mixin.py:149} INFO - 990:	learn: 8047929.0918799	total: 11m 31s	remaining: 6.28s
+[2023-05-26T02:44:56.457+0000] {logging_mixin.py:149} INFO - 991:	learn: 8047928.8381855	total: 11m 32s	remaining: 5.59s
+[2023-05-26T02:44:57.122+0000] {logging_mixin.py:149} INFO - 992:	learn: 8047928.6943918	total: 11m 33s	remaining: 4.89s
+[2023-05-26T02:44:57.719+0000] {logging_mixin.py:149} INFO - 993:	learn: 8047928.6046996	total: 11m 33s	remaining: 4.19s
+[2023-05-26T02:44:58.409+0000] {logging_mixin.py:149} INFO - 994:	learn: 8047928.4890266	total: 11m 34s	remaining: 3.49s
+[2023-05-26T02:44:59.200+0000] {logging_mixin.py:149} INFO - 995:	learn: 8047928.2372999	total: 11m 35s	remaining: 2.79s
+[2023-05-26T02:44:59.923+0000] {logging_mixin.py:149} INFO - 996:	learn: 8047928.1870860	total: 11m 36s	remaining: 2.09s
+[2023-05-26T02:45:00.607+0000] {logging_mixin.py:149} INFO - 997:	learn: 8047928.1263950	total: 11m 36s	remaining: 1.4s
+[2023-05-26T02:45:01.246+0000] {logging_mixin.py:149} INFO - 998:	learn: 8047926.8499819	total: 11m 37s	remaining: 698ms
+[2023-05-26T02:45:01.957+0000] {logging_mixin.py:149} INFO - 999:	learn: 8047925.9771935	total: 11m 38s	remaining: 0us
+[2023-05-26T02:45:05.114+0000] {ohcl_daily.py:188} INFO - testing accuracy: (mae: 484569.5918300376, mse: 48176865281466.55)
+[2023-05-26T02:45:05.114+0000] {ohcl_daily.py:189} INFO - training accuracy: (mae: 484349.5326577817, mse: 64769113912091.914)
+[2023-05-26T02:45:05.228+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-05-26T02:45:05.234+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=ohcl_daily, task_id=model_training, execution_date=20230525T000000, start_date=20230526T023252, end_date=20230526T024505
+[2023-05-26T02:45:05.300+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-05-26T02:45:05.317+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check
