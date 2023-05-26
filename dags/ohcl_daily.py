@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import datetime
 
 import pendulum
@@ -84,23 +82,24 @@ def feature_engineering(**kargs):
     in_path = path.join(data_dir, f"ohcl_raw_{date}")
     out_path = path.join(data_dir, f"ohcl_features_{date}")
 
-    columns = ["Symbol", "Date", "Volume", "Close"]
+    columns = ["Symbol", "Date", "Volume", "Adj Close"]
     data = pd.read_parquet(in_path, columns=columns)
     logging.info(f"Read data from {in_path}")
 
-    column_renaming = {
+    column_mapping = {
         "Volume": "vol_moving_avg",
-        "Close": "adj_close_rolling_med",
+        "Adj Close": "adj_close_rolling_med",
     }
     rolling_avgs = (
         data.groupby("Symbol")
-        .rolling(30, on="Date")[["Volume", "Close"]]
+        .rolling(30, on="Date")[["Volume", "Adj Close"]]
         .mean()
-        .rename(columns=column_renaming)
+        .rename(columns=column_mapping)
         .reset_index()
         .dropna()
     )
-    logging.info(f"Rolling averages computed for {list(column_renaming.keys())}")
+    
+    logging.info(f"Rolling averages computed for {list(column_mapping.keys())}")
 
     rolling_avgs.to_parquet(
         path=out_path,
@@ -110,8 +109,10 @@ def feature_engineering(**kargs):
     )
     logging.info(f"Written feature data to {out_path}")
 
+
 def watcher():
     raise AirflowException("Failing run because of an upstream failure")
+
 
 ##
 # The RandomForestRegressor from the example code could not run on my
@@ -154,7 +155,7 @@ def model_training(**kargs):
     features = pd.read_parquet(path_to_features)
     data = pd.merge(features, volumes, on=["Date", "Symbol"])
 
-    data['Date'] = pd.to_datetime(data['Date'])
+    data["Date"] = pd.to_datetime(data["Date"])
     data = data.set_index("Date")
     logging.info(f"Loaded data from [{path_to_raw}, {path_to_features}]")
 
@@ -200,9 +201,9 @@ def model_training(**kargs):
 ## START DAG CREATION:
 ##
 # This is set to run daily. I was thinking that a *real* pipeline such as this
-# one would run only retrieve the latest day's data and update an existing 
+# one would run only retrieve the latest day's data and update an existing
 # dataset. Then it would train or even update the weights of an existing model
-# based on the new data. 
+# based on the new data.
 #
 # Since this dataset is static, the current implementation retrieves the entire
 # dataset every time and trains a new model.
@@ -256,7 +257,6 @@ with DAG(
     clean >> cleanup_tmp
 
     [cleanup_tmp, training] >> fail_watcher
-
 
 
 ## END DAG CREATION:
