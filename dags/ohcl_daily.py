@@ -75,6 +75,7 @@ def clean_data(**kargs):
 def feature_engineering(**kargs):
     import pandas as pd
     from os import path
+    from data_transformations import rolling_avgs
 
     task_instance = kargs.get("ti")
     date = task_instance.xcom_pull(key="date")
@@ -90,18 +91,10 @@ def feature_engineering(**kargs):
         "Volume": "vol_moving_avg",
         "Adj Close": "adj_close_rolling_med",
     }
-    rolling_avgs = (
-        data.groupby("Symbol")
-        .rolling(30, on="Date")[["Volume", "Adj Close"]]
-        .mean()
-        .rename(columns=column_mapping)
-        .reset_index()
-        .dropna()
-    )
-    
+    avgs = rolling_avgs(data, 30, column_mapping, "Symbol", "Date")
     logging.info(f"Rolling averages computed for {list(column_mapping.keys())}")
 
-    rolling_avgs.to_parquet(
+    avgs.to_parquet(
         path=out_path,
         partition_cols=["Date"],
         index=False,
