@@ -12,7 +12,7 @@ for details.
 
 
 ## Setup
-
+BufEnter
 A [Kaggle](kaggle.com/) API token is required for downloading th dataset.
 It can me created on your account settings page:
 [https://www.kaggle.com/settings](https://www.kaggle.com/settings)
@@ -27,6 +27,24 @@ docker compose up airflow-init
 docker compose up
 ```
 
+### Testing
+#### Unit tests
+
+Create local env and activate it
+```sh
+python -m venv .venv
+. .venv/bin/activate
+```
+
+Install dependencies
+```sh
+pip install -r requirements.txt
+```
+
+Run tests
+```sh
+pytest ./tests
+```
 ## Pipeline
 
 The DAG set to run daily. I was thinking that a *real* pipeline such as this
