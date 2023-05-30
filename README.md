@@ -93,3 +93,25 @@ retrieves the entire dataset every time and trains a new model.
 
     The api is hosted with render and can be accessed at
     [rt-ws.andreistoica.ca/predict](https://rt-ws.andreistoica.ca/predict?vol_moving_avg=12345&adj_close_rolling_med=25)
+
+    Deployment setup:
+    - [Render](https://render.com) free tier
+    - automatic deploy on push to main
+
+    Limitations:
+    - automatically spun down after 15 minutes without requests and spun back up
+    when a new request is issued
+        - model is loaded on launch every time
+        - longer cold boot time
+        - inference time seems to be acceptable after cold boot
+    - Free tier does not support a persistent disk
+        - model changes need to be committed to git repository
+    
+    Possible future iteration:
+    - Paid instance on Render
+        - No more cold boot problem
+        - take advantage of Render's scaling features for load balancing
+    - S3 for model storage
+        - load from S3 into memory on launch
+        - when a request is made, check for new models then load it
+        asynchronously for future requests.
